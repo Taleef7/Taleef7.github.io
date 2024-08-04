@@ -6,24 +6,24 @@
 // Sample project data
 const projectData = [
   {
-    image: '../../Public/Project1.png', // Replace with your project image path
+    image: '/Project1.png', // Replace with your project image path
     title: 'Employee Attendance and Leave Management System',
     description: 'Created an efficient system for tracking employee attendance and leave, addressing the need for automation and accuracy',
     techLogos: [
-      '../../Public/mongodb.png', // Replace with your technology logo paths
-      '../../Public/expressjs.png',
-      '../../Public/react.png',
-      '../../Public/nodejs.png',
+      '/mongodb.png', // Replace with your technology logo paths
+      '/expressjs.png',
+      '/react.png',
+      '/nodejs.png',
     ],
     githubLink: 'https://github.com/Haris-Asghar/CS-360-Project', // Replace with your GitHub repo link
   },
   {
-    image: '../../Public/Project2.png',
+    image: '/Project2.png',
     title: 'Authorship Attribution using Twitter Data',
     description: 'Authorship attribution of thousands of tweets from influential twitter handles, using a variety of models in the process',
     techLogos: [
-      '../../Public/pandas.png',
-      '../../Public/numpy.png',
+      '/pandas.png',
+      '/numpy.png',
     ],
     githubLink: 'https://github.com/Taleef7/Authorship-Attribution',
   },

@@ -18,7 +18,7 @@ const About = () => {
           {/* Photo */}
           <div className="md:w-1/2 mb-8 md:mb-8">
             <img
-              src="../../Public/photo.jpg" // Replace with the path to your photo
+              src="/photo.jpg" // Replace with the path to your photo
               alt="Taleef Tamsal"
               className="w-full h-auto rounded-full shadow-lg"
             />
@@ -36,7 +36,7 @@ const About = () => {
             </p>
             {/* Resume Download Button */}
             <a
-              href="../../Public/resume.pdf" // Replace with the path to your CV/Resume
+              href="/resume.pdf" // Replace with the path to your CV/Resume
               download
               className="mt-6 inline-block hover:text-white bg-secondary focus:bg-blue-800 text-background py-2 px-4 rounded-lg shadow hover:bg-secondary-dark transition-transform transform hover:scale-105 hover:-translate-y-1 duration-200"
             >

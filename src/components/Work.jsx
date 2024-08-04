@@ -3,8 +3,8 @@
 
 // import React from 'react';
 import timelineElements from '../../public/timelineElements';
-import schoolIcon from '../../public/school.svg';
-import workIcon from '../../public/work.svg';
+import schoolIcon from '/school.svg';
+import workIcon from '/work.svg';
 
 // Define the WorkCard component within the same file
 const WorkCard = ({ element, isLeft }) => {
