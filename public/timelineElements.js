@@ -1,0 +1,52 @@
+const timelineElements = [
+    {
+      id: 1,
+      title: "Bloomfield Hall School",
+      location: "Multan, Punjab",
+      description: "Completed my O and A Levels, graduating with top grades",
+      buttonText: "Details",
+      date: "2016-2020",
+      icon: "school",
+      link: "https://www.bhsmultancantt.edu.pk/",
+      color: "blue",
+      tech: [],
+    },
+    {
+      id: 2,
+      title: "Lahore University of Management Sciences",
+      location: "Lahore, Punjab",
+      description: "Completed my Bachelor's in Computer Science",
+      buttonText: "Details",
+      date: "2020-2024",
+      icon: "school",
+      link: "https://lums.edu.pk/",
+      color: "purple",
+      tech: ["React", "HTML", "CSS", "JavaScript", "MongoDB", "Node.js", "Python"],
+    },
+    {
+      id: 3,
+      title: "Purdue University Fort Wayne",
+      location: "Fort Wayne, Indiana",
+      description: "Pursuing my Master's in Computer Science",
+      buttonText: "Details",
+      date: "2024-Present",
+      icon: "school",
+      link: "https://www.pfw.edu/",
+      color: "yellow",
+      tech: [],
+    },
+    // {
+    //   id: 2,
+    //   title: "Software Developer Internship",
+    //   location: "City2, State2",
+    //   description: "Worked on web development projects",
+    //   buttonText: "Details",
+    //   date: "2018-2019",
+    //   icon: "work",
+    //   color: "purple",
+    //   tech: ["JavaScript", "React", "Node.js", "SQL"],
+    // },
+    
+  ];
+  
+  export default timelineElements.reverse();
