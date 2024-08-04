@@ -6,24 +6,24 @@
 // Sample project data
 const projectData = [
   {
-    image: '../../src/assets/Project1.png', // Replace with your project image path
+    image: '../../Public/Project1.png', // Replace with your project image path
     title: 'Employee Attendance and Leave Management System',
     description: 'Created an efficient system for tracking employee attendance and leave, addressing the need for automation and accuracy',
     techLogos: [
-      '../../src/assets/mongodb.png', // Replace with your technology logo paths
-      '../../src/assets/expressjs.png',
-      '../../src/assets/react.png',
-      '../../src/assets/nodejs.png',
+      '../../Public/mongodb.png', // Replace with your technology logo paths
+      '../../Public/expressjs.png',
+      '../../Public/react.png',
+      '../../Public/nodejs.png',
     ],
     githubLink: 'https://github.com/Haris-Asghar/CS-360-Project', // Replace with your GitHub repo link
   },
   {
-    image: '../../src/assets/Project2.png',
+    image: '../../Public/Project2.png',
     title: 'Authorship Attribution using Twitter Data',
     description: 'Authorship attribution of thousands of tweets from influential twitter handles, using a variety of models in the process',
     techLogos: [
-      '../../src/assets/pandas.png',
-      '../../src/assets/numpy.png',
+      '../../Public/pandas.png',
+      '../../Public/numpy.png',
     ],
     githubLink: 'https://github.com/Taleef7/Authorship-Attribution',
   },

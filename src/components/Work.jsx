@@ -2,9 +2,9 @@
 // src/components/Work.jsx
 
 // import React from 'react';
-import timelineElements from '../assets/timelineElements';
-import schoolIcon from '../assets/school.svg';
-import workIcon from '../assets/work.svg';
+import timelineElements from '../../public/timelineElements';
+import schoolIcon from '../../public/school.svg';
+import workIcon from '../../public/work.svg';
 
 // Define the WorkCard component within the same file
 const WorkCard = ({ element, isLeft }) => {

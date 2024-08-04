@@ -108,13 +108,13 @@ const Contact = () => {
                 <a href="https://linkedin.com/in/yourusername" className="text-gray-400 hover:text-blue-500 transition duration-300">
                   <FaLinkedin size="2em" />
                 </a>
-                <a href="https://github.com/yourusername" className="text-gray-400 hover:text-black transition duration-300">
+                <a href="https://github.com/Taleef7" className="text-gray-400 hover:text-black transition duration-300">
                   <FaGithub size="2em" />
                 </a>
-                <a href="https://facebook.com/yourusername" className="text-gray-400 hover:text-blue-700 transition duration-300">
+                <a href="https://www.facebook.com/taleef.tamsal/" className="text-gray-400 hover:text-blue-700 transition duration-300">
                   <FaFacebook size="2em" />
                 </a>
-                <a href="https://instagram.com/yourusername" className="text-gray-400 hover:text-pink-400 transition duration-300">
+                <a href="https://www.instagram.com/taleeftamsal/" className="text-gray-400 hover:text-pink-400 transition duration-300">
                   <FaInstagram size="2em" />
                 </a>
                 <a href="mailto:taleeftamsal@hotmail.com" className="text-gray-400 hover:text-blue-500 transition duration-300">
