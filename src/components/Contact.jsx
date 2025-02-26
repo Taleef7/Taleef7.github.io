@@ -1,132 +1,161 @@
-import { useState } from 'react';
-import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa';
+import { useRef, useState } from 'react'
+import emailjs from 'emailjs-com'
 
-const Contact = () => {
+export default function Contact() {
+  const formRef = useRef(null)
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    from_name: '',
+    from_email: '',
     message: '',
-  });
+  })
+  const [errors, setErrors] = useState({})
+  const [statusMessage, setStatusMessage] = useState('')
+  const [isSending, setIsSending] = useState(false)
 
-  const [errors, setErrors] = useState({});
+  // Grab env variables from Vite's import.meta.env
+  const serviceID = import.meta.env.VITE_EMAILJS_SERVICE_ID
+  const templateID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+  const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
+  // Validate form fields
   const validateForm = () => {
-    let valid = true;
-    let errors = {};
+    let valid = true
+    let tempErrors = {}
 
-    if (!formData.name) {
-      errors.name = 'Name is required';
-      valid = false;
+    if (!formData.from_name) {
+      tempErrors.from_name = 'Name is required'
+      valid = false
     }
 
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!formData.email || !emailRegex.test(formData.email)) {
-      errors.email = 'Valid email is required';
-      valid = false;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!formData.from_email || !emailRegex.test(formData.from_email)) {
+      tempErrors.from_email = 'Valid email is required'
+      valid = false
     }
 
     if (!formData.message) {
-      errors.message = 'Message is required';
-      valid = false;
+      tempErrors.message = 'Message is required'
+      valid = false
     }
 
-    setErrors(errors);
-    return valid;
-  };
+    setErrors(tempErrors)
+    return valid
+  }
 
+  // Handle form input changes
+  const handleChange = (e) => {
+    const { name, value } = e.target
+    setFormData({ ...formData, [name]: value })
+  }
+
+  // Handle form submission via EmailJS
   const handleSubmit = (e) => {
-    e.preventDefault();
-    if (validateForm()) {
-      // handle form submission
-      console.log('Form submitted:', formData);
-    }
-  };
+    e.preventDefault()
+    if (!validateForm()) return
+
+    setIsSending(true)
+    setStatusMessage('')
+
+    // Use emailjs.sendForm(...) to send the form data
+    emailjs
+      .sendForm(serviceID, templateID, formRef.current, publicKey)
+      .then(
+        (result) => {
+          console.log('EmailJS Result:', result.text)
+          setStatusMessage("Thanks for your message! I'll get back to you soon.")
+          setIsSending(false)
+          // Reset form fields
+          setFormData({ from_name: '', from_email: '', message: '' })
+        },
+        (error) => {
+          console.error('EmailJS Error:', error.text)
+          setStatusMessage('Something went wrong. Please try again later.')
+          setIsSending(false)
+        }
+      )
+  }
 
   return (
-    <section id='contact'>
-      <div className="bg-light text-white py-12 px-4">
-        <h2 className="text-4xl font-bold text-center mb-8">Contact</h2>
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row">
-          {/* Form Section */}
-          <div className="w-full bg-white p-8 rounded-lg shadow-lg">
-            <form onSubmit={handleSubmit}>
-              <div className="mb-4">
-                <label className="block text-lg font-bold mb-0.75 text-secondary" htmlFor="name">Name</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="w-full p-2 rounded-md bg-background border border-gray-600 focus:border-secondary focus:outline-secondary"
-                  value={formData.name}
-                  onChange={handleChange}
-                />
-                {errors.name && <p className="text-red-600 text-sm">{errors.name}</p>}
-              </div>
-              <div className="mb-4">
-                <label className="block text-lg font-bold mb-0.75 text-secondary" htmlFor="email">Email</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="w-full p-2 rounded-md bg-background border border-gray-600 focus:border-secondary focus:outline-secondary"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <p className="text-red-600 text-sm">{errors.email}</p>}
-              </div>
-              <div className="mb-4">
-                <label className="block text-lg font-bold mb-0.75 text-secondary" htmlFor="message">Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  className="w-full p-2 rounded-md bg-background border border-gray-600 focus:border-secondary focus:outline-secondary"
-                  rows="4"
-                  value={formData.message}
-                  onChange={handleChange}
-                ></textarea>
-                {errors.message && <p className="text-red-600 text-sm">{errors.message}</p>}
-              </div>
-              <button
-                type="submit"
-                className="w-full p-2 text-background bg-secondary rounded-md font-medium hover:bg-blue-800 hover:text-white focus:outline-none transition duration-300"
-              >
-                Send Message
-              </button>
-            </form>
-            <div className="mt-8 text-center">
-              <h3 className="text-2xl font-bold mt-16 mb-4 text-secondary">Connect with me</h3>
-              <div className="flex justify-center space-x-4">
-                
-                <a href="https://linkedin.com/in/yourusername" className="text-gray-400 hover:text-blue-500 transition duration-300">
-                  <FaLinkedin size="2em" />
-                </a>
-                <a href="https://github.com/Taleef7" className="text-gray-400 hover:text-black transition duration-300">
-                  <FaGithub size="2em" />
-                </a>
-                <a href="https://www.facebook.com/taleef.tamsal/" className="text-gray-400 hover:text-blue-700 transition duration-300">
-                  <FaFacebook size="2em" />
-                </a>
-                <a href="https://www.instagram.com/taleeftamsal/" className="text-gray-400 hover:text-pink-400 transition duration-300">
-                  <FaInstagram size="2em" />
-                </a>
-                <a href="mailto:taleeftamsal@hotmail.com" className="text-gray-400 hover:text-blue-500 transition duration-300">
-                  <FaEnvelope size="2em" />
-                </a>
-              </div>
-            </div>
+    <section id="contact" className="bg-black text-white py-12 px-4">
+      <h2 className="text-4xl font-bold text-center mb-8">Get in Touch</h2>
+      <div className="max-w-xl mx-auto">
+        <form 
+          ref={formRef} 
+          onSubmit={handleSubmit} 
+          className="space-y-4 bg-neutral-800 p-6 rounded-lg shadow"
+        >
+          {/* Name */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="from_name">
+              Name
+            </label>
+            <input
+              className="w-full p-2 rounded bg-black border border-gray-600 text-white 
+                         focus:outline-none focus:ring-1 focus:ring-secondary"
+              type="text"
+              id="from_name"
+              name="from_name"
+              value={formData.from_name}
+              onChange={handleChange}
+              placeholder="Your Name"
+            />
+            {errors.from_name && <p className="text-red-500 text-xs mt-1">{errors.from_name}</p>}
           </div>
-        </div>
+
+          {/* Email */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="from_email">
+              Email
+            </label>
+            <input
+              className="w-full p-2 rounded bg-black border border-gray-600 text-white 
+                         focus:outline-none focus:ring-1 focus:ring-secondary"
+              type="email"
+              id="from_email"
+              name="from_email"
+              value={formData.from_email}
+              onChange={handleChange}
+              placeholder="you@example.com"
+            />
+            {errors.from_email && <p className="text-red-500 text-xs mt-1">{errors.from_email}</p>}
+          </div>
+
+          {/* Message */}
+          <div>
+            <label className="block text-sm font-medium mb-1" htmlFor="message">
+              Message
+            </label>
+            <textarea
+              className="w-full p-2 rounded bg-black border border-gray-600 text-white 
+                         focus:outline-none focus:ring-1 focus:ring-secondary"
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Write your message here..."
+            />
+            {errors.message && <p className="text-red-500 text-xs mt-1">{errors.message}</p>}
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isSending}
+            className="w-full p-2 rounded-md bg-secondary text-black font-medium 
+                       hover:bg-secondary-dark transition-colors focus:outline-none"
+          >
+            {isSending ? 'Sending...' : 'Send Message'}
+          </button>
+
+          {/* Status Message */}
+          {statusMessage && (
+            <p className="text-sm text-center mt-4 text-gray-300">
+              {statusMessage}
+            </p>
+          )}
+        </form>
       </div>
     </section>
-  );
-};
-
-export default Contact;
+  )
+}

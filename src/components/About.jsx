@@ -1,54 +1,108 @@
-// src/components/About.jsx
-// import React from 'react';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-// import '../styles/About.css'; // Import the CSS file for transition styles
+import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope } from 'react-icons/fa'
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
-const About = () => {
-  const isVisible = useIntersectionObserver({ threshold: 0.1 });
+export default function About() {
+  const isVisible = useIntersectionObserver({ threshold: 0.1 })
 
   return (
-    <section id="about" className={`snap-section bg-background text-white py-16 fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
+    <section
+      id="about"
+      className={`snap-section bg-black text-white py-10 fade-in ${isVisible ? 'fade-in-visible' : ''}`}
+    >
       <div className="container mx-auto px-4">
-        {/* Heading */}
-        <header className="mb-6 text-center">
+        {/* Section Heading */}
+        <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold">About</h1>
         </header>
 
-        <div className="flex flex-col md:flex-row items-center">
+        <div className="flex flex-col md:flex-row items-center gap-8">
           {/* Photo */}
-          <div className="md:w-1/2 mb-8 md:mb-8">
+          <div className="md:w-1/3 flex justify-center md:justify-end">
             <img
-              src="/photo.jpg" // Replace with the path to your photo
+              src="/photo.jpg" // Replace with your actual photo path
               alt="Taleef Tamsal"
-              className="w-full h-auto rounded-full shadow-lg"
+              className="w-128 h-128 rounded-full object-cover border-4 border-white shadow-lg"
             />
           </div>
 
-          {/* Text Bubble */}
-          <div className="md:w-1/2 md:ml-4 p-6 relative bg-white text-secondary rounded-lg shadow-lg">
+          {/* Text & Socials */}
+          <div className="md:w-2/3">
             <h2 className="text-2xl font-bold mb-4">About Me</h2>
-            <p>
-              Hello! I&apos;m Taleef Tamsal, a dedicated and ambitious software engineer studying Masters in Computer Science from Purdue University Fort Wayne (PFW). I graduated in June 2024 with a Bachelor of Science in Computer Science from the Lahore University of Management Sciences (LUMS), where I not only honed my technical skills but also cultivated a deep appreciation for innovative problem-solving and cutting-edge technology.
+            <p className="mb-4 leading-relaxed">
+              Hi, I’m <strong>Taleef Tamsal</strong>—a passionate software engineer and current MS candidate 
+              in Computer Science at Purdue University. I earned my BS in Computer Science from LUMS, 
+              with skills in full‐stack development, machine learning, data science, and the cloud. I love solving 
+              complex problems, experimenting with new technologies, and collaborating to bring innovative 
+              ideas to life.
             </p>
-            <br />
-            <p>
-            I am particularly passionate about leveraging machine learning and data analytics for real-world applications. Additionally, I have explored the intersection of blockchain and healthcare through a smart contract-based patient consent management system. My approach to software development is characterized by meticulous attention to detail, a commitment to collaborative teamwork, and an unwavering drive for innovation. 
+            <p className="mb-4 leading-relaxed">
+              When I’m not coding, I’m researching the latest AI/ML breakthroughs, refining my 
+              DevOps and Engineering skills, or exploring new models for fun. 
             </p>
+
             {/* Resume Download Button */}
             <a
-              href="/resume.pdf" // Replace with the path to your CV/Resume
+              href="/Taleefs_Resume.pdf" // Replace with your actual resume path
               download
-              className="mt-6 inline-block hover:text-white bg-secondary focus:bg-blue-800 text-background py-2 px-4 rounded-lg shadow hover:bg-secondary-dark transition-transform transform hover:scale-105 hover:-translate-y-1 duration-200"
+              className="inline-block bg-white text-black py-2 px-4 rounded-lg shadow
+                         hover:bg-secondary transition-colors duration-300"
             >
               Download CV/Resume
             </a>
-            {/* Text bubble arrow */}
-            <div className="absolute top-0 left-0 transform rotate-90 -translate-y-3 translate-x-10 w-0 h-0 border-t-8 border-r-8 border-b-8 border-t-transparent border-b-transparent border-r-secondary md:top-1/2 md:-translate-y-1/2 md:transform-none md:border-l-8 md:border-r-0 md:border-l-secondary"></div>
+
+            {/* Social Icons Row */}
+            <div className="flex space-x-4 mt-6">
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/ttamsal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-blue-500 transition-colors duration-300"
+              >
+                <FaLinkedin size="1.5em" />
+              </a>
+
+              {/* GitHub */}
+              <a
+                href="https://github.com/Taleef7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-white transition-colors duration-300"
+              >
+                <FaGithub size="1.5em" />
+              </a>
+
+              {/* Facebook */}
+              <a
+                href="https://www.facebook.com/taleef.tamsal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-secondary transition-colors duration-300"
+              >
+                <FaFacebook size="1.5em" />
+              </a>
+
+              {/* Instagram */}
+              <a
+                href="https://www.instagram.com/taleeftamsal/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-pink-400 transition-colors duration-300"
+              >
+                <FaInstagram size="1.5em" />
+              </a>
+
+              {/* Email */}
+              <a
+                href="mailto:taleeftamsal@hotmail.com"
+                className="text-gray-400 hover:text-blue-700 transition-colors duration-300"
+              >
+                <FaEnvelope size="1.5em" />
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  );
-};
-
-export default About;
+  )
+}

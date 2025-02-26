@@ -1,79 +1,83 @@
 /* eslint-disable react/prop-types */
-// src/components/Projects.jsx
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
-// import React from 'react';
-
-// Sample project data
+// Example project data
 const projectData = [
   {
-    image: '/Project1.png', // Replace with your project image path
+    image: '/Project1.png',
     title: 'Employee Attendance and Leave Management System',
-    description: 'Created an efficient system for tracking employee attendance and leave, addressing the need for automation and accuracy',
-    techLogos: [
-      '/mongodb.png', // Replace with your technology logo paths
-      '/expressjs.png',
-      '/react.png',
-      '/nodejs.png',
-    ],
-    githubLink: 'https://github.com/Haris-Asghar/CS-360-Project', // Replace with your GitHub repo link
+    description:
+      'Created an efficient system for tracking employee attendance and leave, addressing the need for automation and accuracy',
+    techLogos: ['/mongodb.png', '/expressjs.png', '/react.png', '/nodejs.png'],
+    githubLink: 'https://github.com/Haris-Asghar/CS-360-Project',
   },
   {
     image: '/Project2.png',
     title: 'Authorship Attribution using Twitter Data',
-    description: 'Authorship attribution of thousands of tweets from influential twitter handles, using a variety of models in the process',
-    techLogos: [
-      '/pandas.png',
-      '/numpy.png',
-    ],
+    description:
+      'Authorship attribution of thousands of tweets from influential Twitter handles, using a variety of models in the process',
+    techLogos: ['/pandas.png', '/numpy.png'],
     githubLink: 'https://github.com/Taleef7/Authorship-Attribution',
   },
   // Add more projects as needed
-];
+]
 
-// src/components/Projects.jsx
-// import React from 'react';
-import useIntersectionObserver from '../hooks/useIntersectionObserver';
-// import '../styles/Projects.css'; // Import the CSS file for transition styles
-
-const ProjectCard = ({ image, title, description, techLogos, githubLink }) => {
+function ProjectCard({ image, title, description, techLogos, githubLink }) {
   return (
-    <div className="group relative bg-white shadow-lg rounded-3xl overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-2xl fade-in">
-      <div className="relative">
-        <img src={image} alt={title} className="w-full h-48 object-cover rounded-3xl" />
-        <div className="absolute top-0 right-0 m-2">
-          <a href={githubLink} target="_blank" rel="noopener noreferrer">
-            <svg
-              className="w-7 h-7 text-slate-500 hover:text-secondary transition-colors duration-300"
-              fill="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.26.793-.577v-2.165c-3.338.725-4.042-1.609-4.042-1.609-.546-1.387-1.333-1.757-1.333-1.757-1.091-.745.083-.73.083-.73 1.205.084 1.84 1.237 1.84 1.237 1.07 1.834 2.809 1.304 3.495.998.107-.775.42-1.305.762-1.605-2.665-.304-5.466-1.334-5.466-5.931 0-1.311.467-2.382 1.235-3.222-.124-.304-.535-1.527.117-3.18 0 0 1.008-.322 3.301 1.23.957-.266 1.984-.398 3.005-.403 1.021.005 2.048.137 3.006.403 2.292-1.552 3.299-1.23 3.299-1.23.653 1.653.242 2.876.118 3.18.77.84 1.234 1.911 1.234 3.222 0 4.609-2.803 5.624-5.475 5.921.431.372.816 1.103.816 2.222v3.293c0 .32.193.694.801.576C20.565 21.797 24 17.302 24 12c0-6.627-5.373-12-12-12z" />
-            </svg>
-          </a>
+    <div className="bg-neutral-800 rounded-md p-6 flex flex-col justify-between h-full hover:shadow-xl transition-shadow">
+      {/* Top Section: Image + Title/Description */}
+      <div>
+        <div className="relative aspect-video mb-4">
+          <img
+            src={image}
+            alt={title}
+            className="object-cover w-full h-full rounded-md"
+          />
         </div>
+        <h3 className="text-xl font-semibold text-white mb-2">{title}</h3>
+        <p className="text-sm text-gray-300 mb-4">{description}</p>
       </div>
-      <div className="p-4">
-        <h3 className="text-xl font-bold mb-2">{title}</h3>
-        <p className="text-background mb-4">{description}</p>
-        <div className="flex space-x-2">
+
+      {/* Bottom Section: Tech Logos + GitHub Button */}
+      <div>
+        <div className="flex space-x-2 mb-4">
           {techLogos.map((logo, index) => (
             <img key={index} src={logo} alt="Tech logo" className="w-8 h-8" />
           ))}
         </div>
+        <a
+          href={githubLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-white bg-gray-700 rounded-md hover:bg-gray-600 transition-colors"
+        >
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.207 11.387.6.111.793-.26.793-.577v-2.17c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.335-1.757-1.335-1.757-1.091-.746.082-.73.082-.73 1.205.08 1.84 1.235 1.84 1.235 1.07 1.834 2.807 1.304 3.492.998.108-.774.417-1.304.76-1.604-2.665-.304-5.466-1.333-5.466-5.93 0-1.31.467-2.38 1.235-3.22-.124-.305-.535-1.53.117-3.18 0 0 1.008-.322 3.3 1.23a11.505 11.505 0 0 1 3.006-.404c1.02.005 2.047.138 3.005.403 2.29-1.552 3.298-1.23 3.298-1.23.654 1.65.243 2.874.12 3.18.77.84 1.234 1.91 1.234 3.22 0 4.61-2.807 5.624-5.48 5.92.43.37.82 1.1.82 2.22v3.293c0 .32.192.69.8.576A12.004 12.004 0 0 0 24 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          View on GitHub
+        </a>
       </div>
     </div>
-  );
-};
+  )
+}
 
-const Projects = () => {
-  const isVisible = useIntersectionObserver({ threshold: 0.1 });
+export default function Projects() {
+  const isVisible = useIntersectionObserver({ threshold: 0.1 })
 
   return (
-    <section id="projects" className={`bg-light text-secondary py-16 fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
+    <section
+      id="projects"
+      className={`bg-black py-16 fade-in ${
+        isVisible ? 'fade-in-visible' : ''
+      }`}
+    >
       <div className="container mx-auto px-4">
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-white">Projects</h1>
-          {/* <p className="text-lg mt-4">Some of my recent work</p> */}
         </header>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectData.map((project, index) => (
@@ -89,7 +93,5 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  );
-};
-
-export default Projects;
+  )
+}

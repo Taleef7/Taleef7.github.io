@@ -1,19 +1,13 @@
-import './App.css'
-// import About from './components/About'
-// import Contact from './components/Contact'
-// import Home from './components/Home'
-// import Navbar from './components/Navbar'
-// import Projects from './components/Projects'
-// import Work from './components/Work'
-
 import React, { Suspense } from 'react';
+import Navbar from './components/Navbar';
+import Home from './components/Home';
 
 const About = React.lazy(() => import('./components/About'));
 const Projects = React.lazy(() => import('./components/Projects'));
 const Work = React.lazy(() => import('./components/Work'));
 const Contact = React.lazy(() => import('./components/Contact'));
-const Home = React.lazy(() => import('./components/Home'));
-const Navbar = React.lazy(() => import('./components/Navbar'));
+const TechStack = React.lazy(() => import('./components/TechStack'));
+const Divider = React.lazy(() => import('./components/Divider'));
 
 
 function App() {
@@ -21,14 +15,20 @@ function App() {
 
   return (
     <div>
-      <Suspense fallback={<div>Loading...</div>}>
         <Navbar />
         <Home />
-        <About />
-        <Projects />
-        <Work defaultColor="bg-cyan-500" />
-        <Contact />
-      </Suspense>
+        <Divider />
+        <Suspense fallback={<div>Loading...</div>}>
+          <About />
+          <Divider />
+          <Projects />
+          <Divider />
+          <Work defaultColor="bg-cyan-500" />
+          <Divider />
+          <TechStack />
+          <Divider />
+          <Contact />
+        </Suspense>
     </div>
   )
 }
