@@ -1,8 +1,10 @@
 import { useRef, useState } from 'react'
 import emailjs from 'emailjs-com'
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
 export default function Contact() {
   const formRef = useRef(null)
+  const [isVisible, elementRef] = useIntersectionObserver({ threshold: 0.1 })
   const [formData, setFormData] = useState({
     from_name: '',
     from_email: '',
@@ -77,8 +79,9 @@ export default function Contact() {
 
   return (
     <section id="contact" className="bg-black text-white py-12 px-4">
-      <h2 className="text-4xl font-bold text-center mb-8">Get in Touch</h2>
-      <div className="max-w-xl mx-auto">
+      <div ref={elementRef} className={`fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
+        <h2 className="text-4xl font-bold text-center mb-8">Get in Touch</h2>
+        <div className="max-w-xl mx-auto">
         <form 
           ref={formRef} 
           onSubmit={handleSubmit} 
@@ -155,6 +158,7 @@ export default function Contact() {
             </p>
           )}
         </form>
+        </div>
       </div>
     </section>
   )

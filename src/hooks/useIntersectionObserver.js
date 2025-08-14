@@ -1,25 +1,31 @@
 // src/hooks/useIntersectionObserver.js
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 
 const useIntersectionObserver = (options) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasBeenVisible, setHasBeenVisible] = useState(false);
+  const elementRef = useRef(null);
 
   const handleIntersection = useCallback(([entry]) => {
-    setIsVisible(entry.isIntersecting);
-  }, []);
+    if (entry.isIntersecting && !hasBeenVisible) {
+      setIsVisible(true);
+      setHasBeenVisible(true);
+    }
+  }, [hasBeenVisible]);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(handleIntersection, options);
-    const elements = document.querySelectorAll('.fade-in'); // Select elements with the fade-in class
+    const element = elementRef.current;
+    if (!element) return;
 
-    elements.forEach((element) => observer.observe(element));
+    const observer = new IntersectionObserver(handleIntersection, options);
+    observer.observe(element);
 
     return () => {
-      elements.forEach((element) => observer.unobserve(element));
+      observer.unobserve(element);
     };
   }, [handleIntersection, options]);
 
-  return isVisible;
+  return [isVisible, elementRef];
 };
 
 export default useIntersectionObserver;

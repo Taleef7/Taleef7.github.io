@@ -27,7 +27,7 @@ export default function Navbar() {
           {/* You can replicate this link structure for each link */}
           <a
             href="#about"
-            className="relative font-medium text-white hover:text-secondary transition duration-300 
+            className="relative px-2 py-2 font-medium text-white hover:text-secondary transition duration-300 
                        ease-in-out transform hover:scale-105 active:scale-95
                        after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full 
                        after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 
@@ -38,7 +38,7 @@ export default function Navbar() {
           </a>
           <a
             href="#projects"
-            className="relative font-medium text-white hover:text-secondary transition duration-300 
+            className="relative px-2 py-2 font-medium text-white hover:text-secondary transition duration-300 
                        ease-in-out transform hover:scale-105 active:scale-95
                        after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full 
                        after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 
@@ -49,7 +49,7 @@ export default function Navbar() {
           </a>
           <a
             href="#work"
-            className="relative font-medium text-white hover:text-secondary transition duration-300 
+            className="relative px-2 py-2 font-medium text-white hover:text-secondary transition duration-300 
                        ease-in-out transform hover:scale-105 active:scale-95
                        after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full 
                        after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 
@@ -60,7 +60,7 @@ export default function Navbar() {
           </a>
           <a
             href="#tech-stack"
-            className="relative font-medium text-white hover:text-secondary transition duration-300 
+            className="relative px-2 py-2 font-medium text-white hover:text-secondary transition duration-300 
                        ease-in-out transform hover:scale-105 active:scale-95
                        after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full 
                        after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 
@@ -71,7 +71,7 @@ export default function Navbar() {
           </a>
           <a
             href="#contact"
-            className="relative font-medium text-white hover:text-secondary transition duration-300 
+            className="relative px-2 py-2 font-medium text-white hover:text-secondary transition duration-300 
                        ease-in-out transform hover:scale-105 active:scale-95
                        after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-full 
                        after:h-0.5 after:bg-secondary after:scale-x-0 hover:after:scale-x-100 
@@ -79,6 +79,16 @@ export default function Navbar() {
                        hover:after:origin-bottom-left"
           >
             Contact
+          </a>
+          <a
+            href="/Taleefs_Resume.pdf"
+            download
+            className="px-2 py-2 bg-secondary text-black font-medium rounded-md 
+                       hover:bg-white hover:text-black transition duration-300 
+                       ease-in-out transform hover:scale-105 active:scale-95
+                       shadow-md hover:shadow-lg"
+          >
+            Resume
           </a>
         </div>
 
@@ -150,6 +160,17 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
             >
               Contact
+            </a>
+            <a
+              href="/Taleefs_Resume.pdf"
+              download
+              className="block mx-4 my-2 px-4 py-2 bg-secondary text-black font-medium rounded-md 
+                         hover:bg-white hover:text-black transition duration-300 
+                         ease-in-out transform hover:scale-105 active:scale-95
+                         shadow-md hover:shadow-lg text-center"
+              onClick={() => setIsOpen(false)}
+            >
+              Resume
             </a>
           </div>
         </div>

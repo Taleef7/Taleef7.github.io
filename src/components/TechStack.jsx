@@ -6,6 +6,7 @@ import {
     SiPython, SiDjango, SiPostgresql, SiMongodb, SiNginx, 
     SiPostman, SiFigma, SiJest, SiVercel 
   } from "react-icons/si"
+  import useIntersectionObserver from '../hooks/useIntersectionObserver'
   
   const skillIcons = {
     "React": FaReact,
@@ -57,9 +58,11 @@ import {
   ]
   
   export default function TechStack() {
+    const [isVisible, elementRef] = useIntersectionObserver({ threshold: 0.1 })
+
     return (
       <section id="tech-stack" className="py-16 bg-black text-white">
-        <div className="container mx-auto px-4 text-center">
+        <div ref={elementRef} className={`container mx-auto px-4 text-center fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Tech Stack</h2>
           
           <div className="grid gap-6 md:grid-cols-2">

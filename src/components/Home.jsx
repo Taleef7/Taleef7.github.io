@@ -43,9 +43,9 @@ const Home = () => {
       <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white">
         <h1 ref={headingRef} className="text-4xl md:text-6xl font-bold"></h1>
         <p className="mt-4 text-xl md:text-2xl animate-fadeInUp">
-          To my website
+
         </p>
-        
+
         <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2">
           <a href="#about">
             <svg

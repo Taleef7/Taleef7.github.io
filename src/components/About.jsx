@@ -2,14 +2,14 @@ import { FaGithub, FaLinkedin, FaFacebook, FaInstagram, FaEnvelope } from 'react
 import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
 export default function About() {
-  const isVisible = useIntersectionObserver({ threshold: 0.1 })
+  const [isVisible, elementRef] = useIntersectionObserver({ threshold: 0.1 })
 
   return (
     <section
       id="about"
-      className={`snap-section bg-black text-white py-10 fade-in ${isVisible ? 'fade-in-visible' : ''}`}
+      className="snap-section bg-black text-white py-10"
     >
-      <div className="container mx-auto px-4">
+      <div ref={elementRef} className={`container mx-auto px-4 fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
         {/* Section Heading */}
         <header className="mb-8 text-center">
           <h1 className="text-4xl font-bold">About</h1>
@@ -27,22 +27,17 @@ export default function About() {
 
           {/* Text & Socials */}
           <div className="md:w-2/3">
-            <h2 className="text-2xl font-bold mb-4">About Me</h2>
+            {/* <h2 className="text-2xl font-bold mb-4"></h2> */}
             <p className="mb-4 leading-relaxed">
-              Hi, I’m <strong>Taleef Tamsal</strong>—a passionate software engineer and current MS candidate 
-              in Computer Science at Purdue University. I earned my BS in Computer Science from LUMS, 
-              with skills in full‐stack development, machine learning, data science, and the cloud. I love solving 
-              complex problems, experimenting with new technologies, and collaborating to bring innovative 
-              ideas to life.
+              I'm a Computer Science Master's student at Purdue, and I love creating practical and useful software, especially applications that make everyday life easier. I enjoy taking ideas from concept to reality—whether that’s creating a full-stack web platform or engineering an enterprise AI search engine.
             </p>
             <p className="mb-4 leading-relaxed">
-              When I’m not coding, I’m researching the latest AI/ML breakthroughs, refining my 
-              DevOps and Engineering skills, or exploring new models for fun. 
+              My current focus is on Natural Language Processing, and for my thesis, I'm exploring the efficiency-robustness tradeoff in PEFT-tuned large language models. I'm excited to find a full-time Software Engineering role before I graduate in May 2026 to join a team that's passionate about technology, innovation, and growth. Please feel free to reach out!
             </p>
 
             {/* Resume Download Button */}
             <a
-              href="/Taleefs_Resume.pdf" // Replace with your actual resume path
+              href="/Taleef's_Resume.pdf" // Replace with your actual resume path
               download
               className="inline-block bg-white text-black py-2 px-4 rounded-lg shadow
                          hover:bg-secondary transition-colors duration-300"

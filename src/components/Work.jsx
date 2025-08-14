@@ -2,6 +2,7 @@
 import timelineElements from '/public/timelineElements'
 import schoolIcon from '/school.svg'
 import workIcon from '/work.svg'
+import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
 function WorkCard({ element, isLeft }) {
   return (
@@ -79,9 +80,11 @@ function WorkCard({ element, isLeft }) {
 }
 
 export default function Work() {
+  const [isVisible, elementRef] = useIntersectionObserver({ threshold: 0.1 })
+
   return (
     <section id="work" className="bg-black text-white py-16">
-      <div className="flex flex-col justify-center items-center text-base pb-8 sm:text-lg">
+      <div ref={elementRef} className={`flex flex-col justify-center items-center text-base pb-8 sm:text-lg fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
         <h2 className="text-4xl font-bold mb-8 mt-8">Experience</h2>
         
         <div className="relative w-full sm:w-3/4 lg:w-2/3">

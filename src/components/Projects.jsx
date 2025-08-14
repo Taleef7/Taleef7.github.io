@@ -3,21 +3,54 @@ import useIntersectionObserver from '../hooks/useIntersectionObserver'
 
 // Example project data
 const projectData = [
+
   {
-    image: '/Project1.png',
-    title: 'Employee Attendance and Leave Management System',
+    image: '/Project3.png',
+    title: 'RASS (Retrieval-Augmented Semantic Search) Engine',
     description:
-      'Created an efficient system for tracking employee attendance and leave, addressing the need for automation and accuracy',
-    techLogos: ['/mongodb.png', '/expressjs.png', '/react.png', '/nodejs.png'],
-    githubLink: 'https://github.com/Haris-Asghar/CS-360-Project',
+      'Engineered a production-ready, containerized RAG search engine and integrated it into Redmine to enhance internal knowledge retrieval for AI agents.',
+    techLogos: ['/docker.png', '/nodejs.png', '/opensearch.png', '/react.png', '/rubyonrails.png', '/python.png', '/git.png'],
+    githubLink: 'https://github.com/Taleef7/enhanced-rass',
+  },
+  {
+    image: '/Project4.png',
+    title: 'SemEval 2025 Task 10',
+    description:
+      'Developed multi-faceted NLP models for an international competition to detect and characterize disinformation in multilingual online news.',
+    techLogos: ['/pytorch.png', '/python.png', '/hf.png', 'scikitlearn.png'],
+    githubLink: 'https://github.com/Taleef7/semeval-2025-task10-PFWT10',
+  },
+  {
+    image: '/Project5.png',
+    title: 'Campus Connect',
+    description:
+      'Built a full-stack web application with a CI/CD pipeline to centralize and streamline the application process for on-campus student positions, particularly academic ones',
+    techLogos: ['/react.png', '/nodejs.png', '/firebase.png', '/materialui.png', '/vite.png', '/git.png', '/githubactions.png'],
+    githubLink: 'https://github.com/Taleef7/Campus-Connect',
+  },
+  {
+    image: '/Project6.png',
+    title: 'Attendance Tracker 4.0',
+    description:
+      'Designed and deployed a QR code-based attendance system using React and Firebase to fully automate and streamline the process of record-keeping for university courses.',
+    techLogos: ['/react.png', '/firebase.png', '/materialui.png', '/nodejs.png', '/git.png', '/githubactions.png', '/vite.png', 'sass.png'],
+    githubLink: 'https://github.com/Taleef7/PFW-AttendanceTrackingWebApp',
   },
   {
     image: '/Project2.png',
     title: 'Authorship Attribution using Twitter Data',
     description:
-      'Authorship attribution of thousands of tweets from influential Twitter handles, using a variety of models in the process',
-    techLogos: ['/pandas.png', '/numpy.png'],
+      'Performed authorship attribution of thousands of scraped tweets from influential Twitter handles, using snscrape, and tested across a variety of ML models in the process.',
+    techLogos: ['/pandas.png', '/numpy.svg', '/jupyter.png', '/python.png'],
     githubLink: 'https://github.com/Taleef7/Authorship-Attribution',
+  },
+  {
+    image: '/Project1.png',
+    title: 'Employee Attendance and Leave Management System',
+    description:
+      'Devised, from the ground up, an efficient system for tracking employee attendance and leave, addressing the need for automation and accuracy and improving efficiency across the board.',
+    techLogos: ['/mongodb.svg', '/expressjs.png', '/react.png', '/nodejs.png', '/git.png'],
+    githubLink: 'https://github.com/Haris-Asghar/CS-360-Project',
   },
   // Add more projects as needed
 ]
@@ -66,16 +99,14 @@ function ProjectCard({ image, title, description, techLogos, githubLink }) {
 }
 
 export default function Projects() {
-  const isVisible = useIntersectionObserver({ threshold: 0.1 })
+  const [isVisible, elementRef] = useIntersectionObserver({ threshold: 0.1 })
 
   return (
     <section
       id="projects"
-      className={`bg-black py-16 fade-in ${
-        isVisible ? 'fade-in-visible' : ''
-      }`}
+      className="bg-black py-16"
     >
-      <div className="container mx-auto px-4">
+      <div ref={elementRef} className={`container mx-auto px-4 fade-in ${isVisible ? 'fade-in-visible' : ''}`}>
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-bold text-white">Projects</h1>
         </header>
