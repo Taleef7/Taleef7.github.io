@@ -9,7 +9,7 @@ category: work
 
 **Retrieval-Augmented Semantic Search (RASS)**
 
-*Medical Informatics Engineering | Summer 2025*
+_Medical Informatics Engineering | Summer 2025_
 
 Built a containerized RAG platform for semantic, citation-backed search over long-form enterprise documents. The system emphasizes evaluation as a first-class requirement, with automated quality gates for grounding and relevance integrated into the deployment pipeline.
 

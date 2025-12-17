@@ -34,6 +34,7 @@ Mentored computer science students from Pakistan on graduate admissions processe
 ## Teaching Philosophy
 
 I am committed to:
+
 - Creating inclusive and engaging learning environments
 - Connecting theoretical concepts to practical applications
 - Encouraging critical thinking and systematic problem-solving

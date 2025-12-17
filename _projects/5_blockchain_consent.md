@@ -9,7 +9,7 @@ category: work
 
 **Patient Consent Management via Smart Contracts**
 
-*LUMS Final Year Project*
+_LUMS Final Year Project_
 
 Designed and extended a patient-consent prototype using blockchain smart contracts with fine-grained access control. The system focuses on auditability, secure consent updates, and realistic healthcare workflow integration.
 

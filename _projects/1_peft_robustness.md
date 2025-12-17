@@ -9,8 +9,8 @@ category: research
 
 **Robustness-Efficiency Trade-offs in PEFT-based Instruction-Tuned LLMs**
 
-*Master's Thesis, Purdue University Fort Wayne*  
-*Advisor: Dr. Jonathan Rusert*
+_Master's Thesis, Purdue University Fort Wayne_  
+_Advisor: Dr. Jonathan Rusert_
 
 This thesis empirically studies how parameter-efficient fine-tuning (PEFT) techniques like LoRA and QLoRA, combined with quantization, affect the jailbreak robustness of consumer-sized language models. The core research question is whether the same techniques that make models cheaper and easier to deploy can quietly erode safety margins under realistic adversarial prompting.
 
