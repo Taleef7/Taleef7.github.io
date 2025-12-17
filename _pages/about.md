@@ -27,8 +27,4 @@ Broadly, I study how to make language systems reliable when the constraints are 
 
 - **Master's Thesis**: Robustness–efficiency trade-offs in instruction-tuned LLMs, focusing on how LoRA/QLoRA and quantization can change jailbreak susceptibility under modern black-box attack families.
 
-- **Evaluation Infrastructure**: Building and using evaluation harnesses to support reproducible experiments and defensible robustness claims on smaller, consumer-accessible LLMs.
-
 - **SemEval 2026**: Participating in Task 6 (CLARITY - political question evasion detection) and Task 8 (MTRAGEval - multi-turn RAG evaluation).
-
-- **Multilingual & High-Stakes NLP**: Continued work on news narratives, manipulation detection, and evaluation-centric pipelines.
