@@ -1,6 +1,6 @@
 ---
 layout: page
-title: PEFT & Jailbreak Robustness
+title: PEFT and Jailbreak Robustness
 description: Master's thesis on robustness-efficiency trade-offs in instruction-tuned LLMs
 img:
 importance: 1
