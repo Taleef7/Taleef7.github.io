@@ -30,30 +30,8 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
-        
-          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
-          
-        },
-      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
-        
-          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
-        
-        description: "",
-        section: "Posts",
-        handler: () => {
-          
-            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
-          
-        },
-      },{id: "projects-peft-amp-jailbreak-robustness",
-          title: 'PEFT &amp;amp; Jailbreak Robustness',
+        },{id: "projects-peft-and-jailbreak-robustness",
+          title: 'PEFT and Jailbreak Robustness',
           description: "Master&#39;s thesis on robustness-efficiency trade-offs in instruction-tuned LLMs",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_peft_robustness/";
@@ -62,31 +40,31 @@ ninja.data = [{
           description: "Retrieval-Augmented Semantic Search platform for enterprise documents",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_rass/";
-            },},{id: "projects-unlp-2025",
-          title: 'UNLP-2025',
-          description: "Social Media Manipulation Detection in Ukrainian Telegram Posts",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/3_unlp2025/";
-            },},{id: "projects-semeval-2025-task-10",
-          title: 'SemEval-2025 Task 10',
-          description: "Multilingual Narratives in Online News",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/4_semeval2025/";
-            },},{id: "projects-patient-consent-smart-contracts",
-          title: 'Patient Consent Smart Contracts',
-          description: "Blockchain-based patient consent management system",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_blockchain_consent/";
             },},{id: "projects-semeval-2026-task-6-clarity",
           title: 'SemEval 2026 Task 6 (CLARITY)',
           description: "Political Question Evasion Detection",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/6_semeval2026_task6/";
+              window.location.href = "/projects/3_semeval2026_task6/";
+            },},{id: "projects-patient-consent-smart-contracts",
+          title: 'Patient Consent Smart Contracts',
+          description: "Blockchain-based patient consent management system",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_blockchain_consent/";
+            },},{id: "projects-unlp-2025",
+          title: 'UNLP-2025',
+          description: "Social Media Manipulation Detection in Ukrainian Telegram Posts",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_unlp2025/";
             },},{id: "projects-semeval-2026-task-8-mtrageval",
           title: 'SemEval 2026 Task 8 (MTRAGEval)',
           description: "Multi-Turn RAG Evaluation",
           section: "Projects",handler: () => {
-              window.location.href = "/projects/7_semeval2026_task8/";
+              window.location.href = "/projects/6_semeval2026_task8/";
+            },},{id: "projects-semeval-2025-task-10",
+          title: 'SemEval-2025 Task 10',
+          description: "Multilingual Narratives in Online News",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_semeval2025/";
             },},{
         id: 'social-cv',
         title: 'CV',
@@ -121,13 +99,6 @@ ninja.data = [{
         section: 'Socials',
         handler: () => {
           window.open("/feed.xml", "_blank");
-        },
-      },{
-        id: 'social-custom_social',
-        title: 'Custom_social',
-        section: 'Socials',
-        handler: () => {
-          window.open("https://www.alberteinstein.com/", "_blank");
         },
       },{
       id: 'light-theme',
