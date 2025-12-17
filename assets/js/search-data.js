@@ -30,35 +30,7 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "nav-cv",
-          title: "cv",
-          description: "This is a description of the page. You can modify it in &#39;_pages/cv.md&#39;. You can also change or remove the top pdf download button.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/cv/";
-          },
-        },{id: "nav-people",
-          title: "people",
-          description: "members of the lab or group",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/people/";
-          },
-        },{id: "dropdown-bookshelf",
-              title: "bookshelf",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/books/";
-              },
-            },{id: "dropdown-blog",
-              title: "blog",
-              description: "",
-              section: "Dropdown",
-              handler: () => {
-                window.location.href = "/blog/";
-              },
-            },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
         
           title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
         
@@ -105,6 +77,16 @@ ninja.data = [{
           description: "Blockchain-based patient consent management system",
           section: "Projects",handler: () => {
               window.location.href = "/projects/5_blockchain_consent/";
+            },},{id: "projects-semeval-2026-task-6-clarity",
+          title: 'SemEval 2026 Task 6 (CLARITY)',
+          description: "Political Question Evasion Detection",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_semeval2026_task6/";
+            },},{id: "projects-semeval-2026-task-8-mtrageval",
+          title: 'SemEval 2026 Task 8 (MTRAGEval)',
+          description: "Multi-Turn RAG Evaluation",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_semeval2026_task8/";
             },},{
         id: 'social-cv',
         title: 'CV',
