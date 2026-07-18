@@ -1,13 +1,35 @@
 ---
 ---
 
-@string{aps = {American Physical Society,}}
-
-@inproceedings{tamsal2026peft,
-  title={Robustness-Efficiency Trade-offs in PEFT-based Instruction-Tuned LLMs},
+@inproceedings{tamsal2026clarity,
+  title={SemEval-2026 Task 6: Multi-Seed DeBERTa Ensembles for Political Response Clarity and Evasion Classification},
   author={Tamsal, Taleef and Rusert, Jonathan},
-  booktitle={Master's Thesis (In Progress)},
+  booktitle={Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)},
   year={2026},
-  abstract={Empirical evaluation of parameter-efficient fine-tuning and quantization-based instruction tuning under modern black-box jailbreak attacks to study robustness-efficiency trade-offs in consumer-sized models.},
-  note={Target: EMNLP 2026}
+  abstract={A multi-seed DeBERTa ensemble for political response clarity and evasion classification. The system ranked 18/41 on the clarity subtask and 12/33 on the evasion subtask, while analysis showed that seed diversity transferred more reliably than post-hoc calibration under limited evaluation data.},
+  code={https://github.com/Taleef7/semeval-2026-task6},
+  pdf={https://github.com/Taleef7/semeval-2026-task6/blob/main/latex/acl_latex.pdf},
+  selected={true}
+}
+
+@inproceedings{tamsal2026mtrageval,
+  title={SemEval-2026 Task 8: Lightweight Tri-Fusion Retrieval with Prompt-Engineered Faithful Generation for Multi-Turn RAG},
+  author={Tamsal, Taleef and Rusert, Jonathan},
+  booktitle={Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)},
+  year={2026},
+  abstract={A lightweight multi-turn RAG system combining tri-fusion retrieval with prompt-engineered faithful generation. The system ranked 20/38 on Task A, 6/26 on Task B, and 14/29 on Task C.},
+  code={https://github.com/Taleef7/semeval-2026-task8},
+  pdf={https://github.com/Taleef7/semeval-2026-task8/blob/main/paper/main.pdf},
+  selected={true}
+}
+
+@mastersthesis{tamsal2026peft,
+  title={Do Efficient Adaptations Reduce Safety? Jailbreak Robustness of PEFT vs. Full Fine-Tuning on Consumer-Accessible LLMs},
+  author={Tamsal, Taleef},
+  school={Purdue University},
+  year={2026},
+  abstract={A systematic study of 25 model configurations evaluated against four jailbreak attacks and two safety benchmarks, producing 598 attack-success-rate measurements. The thesis examines how full fine-tuning, LoRA, QLoRA, and quantization change black-box safety and how evaluator choice affects conclusions.},
+  code={https://github.com/Taleef7/peft-robustness-thesis},
+  pdf={https://hammer.purdue.edu/articles/thesis/Do_Efficient_Adaptations_Reduce_Safety_Jailbreak_Robustness_of_PEFT_vs_Full_Fine-Tuning_on_Consumer-Accessible_LLMs/32192700},
+  selected={true}
 }

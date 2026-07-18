@@ -7,12 +7,12 @@ first_name: Taleef
 middle_name:
 last_name: Tamsal
 contact_note: >
-  Feel free to reach out via email for research collaborations or questions.
+  Feel free to reach out about software engineering, applied AI, research collaborations, or interesting systems problems.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  MS Computer Science student at Purdue Fort Wayne working on LLM safety, robustness, and evaluation.
+  Software developer building production AI systems, backend services, and reliable language-model evaluations.
 footer_text: >
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: llm-safety, nlp, machine-learning, robustness, evaluation, academic-website
+keywords: software-engineering, artificial-intelligence, llm-safety, nlp, rag, agents, robustness, evaluation, academic-website
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🎓 # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 

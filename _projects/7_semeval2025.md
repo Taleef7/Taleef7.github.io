@@ -9,7 +9,9 @@ category: research
 
 **SemEval-2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News**
 
-_Purdue University Fort Wayne, 2025_
+_Purdue University, 2025_
+
+Repository: [GitHub](https://github.com/Taleef7/semeval-2025-task10-PFWT10)
 
 Built multilingual transformer-based pipelines for analyzing narrative framing in online news across five languages (English, Georgian, German, Greek, and Turkish). This work demonstrated how representation choices and evaluation design significantly impact model behavior in politically sensitive text.
 
