@@ -25,7 +25,7 @@ My work sits at the intersection of software engineering and applied AI: designi
 
 ## Selected Research
 
-- **Master's thesis**: *Do Efficient Adaptations Reduce Safety? Jailbreak Robustness of PEFT vs. Full Fine-Tuning on Consumer-Accessible LLMs.* I evaluated 25 model configurations across four jailbreak attacks and two safety benchmarks, producing 598 attack-success-rate measurements.
+- **Master's thesis**: *Do Efficient Adaptations Reduce Safety? Jailbreak Robustness of PEFT vs. Full Fine-Tuning on Consumer-Accessible LLMs.* I evaluated 25 model configurations across four jailbreak attacks and two safety benchmarks, producing 600 attack-success-rate measurements.
 
 - **SemEval 2026 Task 6 (CLARITY)**: Co-authored a system paper on multi-seed DeBERTa ensembles for political response clarity and evasion classification; our system ranked 18/41 and 12/33 on the two subtasks.
 - **SemEval 2026 Task 8 (MTRAGEval)**: Co-authored a system paper on lightweight tri-fusion retrieval and faithful generation for multi-turn RAG, ranking 6/26 on Task B.

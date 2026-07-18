@@ -12,7 +12,7 @@ category: research
 _Master's Thesis, Purdue University, defended May 2026_
 _Advisor: Dr. Jonathan Rusert; Committee: Dr. Anshuman Misra and Dr. Jay Johns_
 
-This thesis presents a systematic empirical study of how full fine-tuning, LoRA, QLoRA, and quantization affect jailbreak robustness in consumer-accessible language models. The study covers **25 model configurations**, **four jailbreak attacks**, **two safety benchmarks**, **three automated evaluators**, and **598 attack-success-rate measurements**, with a 100-sample human annotation study for evaluator validation.
+This thesis presents a systematic empirical study of how full fine-tuning, LoRA, QLoRA, and quantization affect jailbreak robustness in consumer-accessible language models. The study covers **25 model configurations**, **four jailbreak attacks**, **two safety benchmarks**, **three automated evaluators**, and **600 attack-success-rate measurements**, with a 100-sample human annotation study for evaluator validation.
 
 ## Research Questions
 

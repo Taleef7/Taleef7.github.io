@@ -40,7 +40,7 @@
       "summary": "Designed reproducible LLM safety and evaluation pipelines for PEFT, jailbreak robustness, and shared-task research.",
       "highlights": [
         "Automated FSDP and SLURM pipelines to evaluate 25 LLM configurations across five model families using full fine-tuning, LoRA, QLoRA, FP16, and 4-bit quantization on A100/A30 GPUs.",
-        "Executed PAIR, DeepInception, ArtPrompt, and AutoDAN across HarmBench and JailbreakBench, producing nearly 600 attack-success-rate measurements across thousands of completions.",
+        "Executed PAIR, DeepInception, ArtPrompt, and AutoDAN across HarmBench and JailbreakBench, producing 600 attack-success-rate measurements across thousands of completions.",
         "Calibrated three automated safety evaluators against human annotations and applied bootstrap confidence intervals, nonparametric tests, and interaction analysis.",
         "Co-authored two SemEval 2026 system papers on multi-turn RAG and political-response clarity/evasion classification."
       ]
