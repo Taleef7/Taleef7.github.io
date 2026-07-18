@@ -30,9 +30,19 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "projects-peft-and-jailbreak-robustness",
-          title: 'PEFT and Jailbreak Robustness',
-          description: "Master&#39;s thesis on robustness-efficiency trade-offs in instruction-tuned LLMs",
+        },{id: "projects-unlp-2026",
+          title: 'UNLP 2026',
+          description: "Ukrainian document question answering with retrieval and reranking",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/10_unlp2026/";
+            },},{id: "projects-workwell-measure-studio",
+          title: 'WorkWell Measure Studio',
+          description: "Production compliance and measure operations platform",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/11_workwell/";
+            },},{id: "projects-master-39-s-thesis-peft-and-jailbreak-robustness",
+          title: 'Master&amp;#39;s Thesis: PEFT and Jailbreak Robustness',
+          description: "Jailbreak robustness of PEFT versus full fine-tuning on consumer-accessible LLMs",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_peft_robustness/";
             },},{id: "projects-rass",
@@ -42,7 +52,7 @@ ninja.data = [{
               window.location.href = "/projects/2_rass/";
             },},{id: "projects-semeval-2026-task-6-clarity",
           title: 'SemEval 2026 Task 6 (CLARITY)',
-          description: "Political Question Evasion Detection",
+          description: "Multi-seed DeBERTa ensembles for political response clarity and evasion classification",
           section: "Projects",handler: () => {
               window.location.href = "/projects/3_semeval2026_task6/";
             },},{id: "projects-patient-consent-smart-contracts",
@@ -50,14 +60,9 @@ ninja.data = [{
           description: "Blockchain-based patient consent management system",
           section: "Projects",handler: () => {
               window.location.href = "/projects/4_blockchain_consent/";
-            },},{id: "projects-unlp-2025",
-          title: 'UNLP-2025',
-          description: "Social Media Manipulation Detection in Ukrainian Telegram Posts",
-          section: "Projects",handler: () => {
-              window.location.href = "/projects/5_unlp2025/";
             },},{id: "projects-semeval-2026-task-8-mtrageval",
           title: 'SemEval 2026 Task 8 (MTRAGEval)',
-          description: "Multi-Turn RAG Evaluation",
+          description: "Lightweight tri-fusion retrieval and faithful generation for multi-turn RAG",
           section: "Projects",handler: () => {
               window.location.href = "/projects/6_semeval2026_task8/";
             },},{id: "projects-semeval-2025-task-10",
@@ -65,6 +70,16 @@ ninja.data = [{
           description: "Multilingual Narratives in Online News",
           section: "Projects",handler: () => {
               window.location.href = "/projects/7_semeval2025/";
+            },},{id: "projects-jobops-copilot",
+          title: 'JobOps Copilot',
+          description: "Human-in-the-loop AI agent platform for job-search operations",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_jobops_copilot/";
+            },},{id: "projects-turboquant",
+          title: 'TurboQuant',
+          description: "KV-cache compression for long-context language models",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_turboquant/";
             },},{
         id: 'social-cv',
         title: 'CV',
@@ -77,7 +92,7 @@ ninja.data = [{
         title: 'email',
         section: 'Socials',
         handler: () => {
-          window.open("mailto:%74%74%61%6D%73%61%6C@%70%75%72%64%75%65.%65%64%75", "_blank");
+          window.open("mailto:%74%61%6C%65%65%66%74%61%6D%73%61%6C@%68%6F%74%6D%61%69%6C.%63%6F%6D", "_blank");
         },
       },{
         id: 'social-github',
