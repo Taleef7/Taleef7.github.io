@@ -9,10 +9,10 @@ category: research
 
 **Do Efficient Adaptations Reduce Safety? Jailbreak Robustness of PEFT vs. Full Fine-Tuning on Consumer-Accessible LLMs**
 
-_Master's Thesis, Purdue University, defended May 2026_
+_Master's Thesis, Purdue University Fort Wayne, defended May 2026_
 _Advisor: Dr. Jonathan Rusert; Committee: Dr. Anshuman Misra and Dr. Jay Johns_
 
-This thesis presents a systematic empirical study of how full fine-tuning, LoRA, QLoRA, and quantization affect jailbreak robustness in consumer-accessible language models. The study covers **25 model configurations**, **four jailbreak attacks**, **two safety benchmarks**, **three automated evaluators**, and **600 attack-success-rate measurements**, with a 100-sample human annotation study for evaluator validation.
+This thesis presents a systematic empirical study of how full fine-tuning, LoRA, QLoRA, and quantization affect jailbreak robustness in consumer-accessible language models. The study covers **25 model configurations**, **four jailbreak attacks**, **two safety benchmarks**, **three automated evaluators**, and nearly **600 attack-success-rate measurements**, calibrated against a **750-sample human annotation study**.
 
 ## Research Questions
 

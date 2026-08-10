@@ -17,9 +17,9 @@ Building a production Total Worker Health compliance platform that brings measur
 
 - Migrated the backend from Java 21/Spring Boot to modular TypeScript while preserving REST contracts and deterministic CQL behavior
 - Implemented HL7 FHIR R4, SMART Backend Services, FHIR MeasureReport, MAT-compatible, and QRDA interoperability
-- Validated CMS122 and CMS125 against **121/121** official MADiE test cases
-- Scaled audited batch evaluation to **5,000 subjects** and **72,100 outcomes** with bounded-memory, resumable processing and per-subject failure isolation
-- Added guarded AI and read-only MCP tools for CQL drafting, test-fixture generation, evidence explanation, and agent access; deterministic CQL remains the compliance authority
+- Implemented HL7 FHIR R4 interoperability and regulatory exports for **eight CMS quality measures**, validated against **410 official MADiE test cases**, and reported a confirmed reference-engine defect
+- Designed a resumable batch pipeline over **70,000 PostgreSQL records** with bounded memory and per-record failure isolation
+- Shipped guardrailed AI assistants and read-only MCP tools backed by **785 automated CI tests** and **43 architecture decision records**; deterministic CQL remains the compliance authority
 
 ## Technical Stack
 

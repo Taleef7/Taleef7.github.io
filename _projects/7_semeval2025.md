@@ -9,7 +9,7 @@ category: research
 
 **SemEval-2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News**
 
-_Purdue University, 2025_
+_Purdue University Fort Wayne, 2025_
 
 Repository: [GitHub](https://github.com/Taleef7/semeval-2025-task10-PFWT10)
 

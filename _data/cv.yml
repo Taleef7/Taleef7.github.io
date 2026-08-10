@@ -12,7 +12,7 @@
   type: time_table
   contents:
     - title: M.S. Computer Science
-      institution: Purdue University
+      institution: Purdue University Fort Wayne, Fort Wayne, IN
       year: 2024 - 2026
       description:
         - Graduated and defended master's thesis in May 2026.
@@ -29,26 +29,32 @@
       institution: Medical Informatics Engineering
       year: May 2026 - Present
       description:
-        - Building WorkWell Measure Studio with modular TypeScript, FHIR interoperability, deterministic CQL evaluation, and guarded AI/MCP tools.
-    - title: Graduate Researcher - AI Safety & LLM Evaluation
-      institution: Purdue University
-      year: Aug 2025 - May 2026
+        - Rebuilt a healthcare compliance backend from Java 21/Spring Boot to modular TypeScript with no breaking API changes.
+        - Implemented HL7 FHIR R4 interoperability for eight CMS measures and validated 410 official MADiE test cases.
+    - title: Graduate Researcher - Machine Learning Evaluation
+      institution: Purdue University Fort Wayne
+      year: Sep 2025 - May 2026
       description:
-        - Built reproducible PEFT, jailbreak robustness, and LLM evaluation pipelines on A100/A30 GPUs.
-        - Co-authored two SemEval 2026 system papers with Dr. Jonathan Rusert.
+        - Automated evaluation across 25 model configurations, five model families, and nearly 600 safety measurements on A100/A30 GPUs.
+        - Published three first-author works, including two SemEval 2026 papers in the ACL Anthology.
     - title: Software Development Intern
       institution: Medical Informatics Engineering
-      year: May 2025 - Sep 2025
+      year: May 2025 - Aug 2025
       description:
-        - Built a multi-service RAG platform with hybrid retrieval, structured citations, MCP/SSE interfaces, and observability.
+        - Built a containerized RAG platform with hybrid search, reranking, structured citations, MCP/SSE interfaces, and observability over 3,000+ documents.
+    - title: Product Associate
+      institution: Riccle
+      year: Sep 2025 - May 2026
+      description:
+        - Analyzed customer, transaction, and competitor data with Python and SQL and automated go-to-market reconciliation workflows.
 
 - title: Research Areas
   type: list
   contents:
-    - LLM safety and adversarial robustness
+    - Adversarial robustness and safety evaluation of large language models
+    - Tool-using agents and measurement reliability
     - Retrieval-augmented generation and agent systems
-    - Efficient inference, PEFT, quantization, and long-context models
-    - Evaluation methodology and reproducible ML systems
+    - Efficient inference, PEFT, quantization, and reproducible ML systems
 
 - title: Technical Skills
   type: nested_list
@@ -58,7 +64,7 @@
         - Python, TypeScript, JavaScript, Java, SQL, Bash, C++, C#
     - title: AI / ML
       items:
-        - PyTorch, Transformers, LangChain, RAG, LLM evaluation, LLM safety
+        - PyTorch, Hugging Face Transformers, PEFT, LangChain, LangGraph, RAG, LLM evaluation, LLM safety
     - title: Backend, Cloud & DevOps
       items:
-        - Node.js, Express, FastAPI, Spring Boot, Next.js, React, Docker, Azure, AWS, GitHub Actions, SLURM
+        - Node.js, Express, FastAPI, Spring Boot, Next.js, React, OpenSearch, PostgreSQL, Docker, Azure, AWS, GitHub Actions, SLURM

@@ -9,7 +9,7 @@ category: research
 
 **SemEval-2026 Task 8: Lightweight Tri-Fusion Retrieval with Prompt-Engineered Faithful Generation for Multi-Turn RAG**
 
-_With Dr. Jonathan Rusert, Purdue University, 2026_
+_With Dr. Jonathan Rusert, Purdue University Fort Wayne, 2026_
 
 I co-authored the system paper for MTRAGEval, a SemEval 2026 benchmark for multi-turn retrieval-augmented generation. The project focuses on retrieval and generation quality when conversation history accumulates across turns.
 

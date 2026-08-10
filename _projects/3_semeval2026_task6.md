@@ -9,7 +9,7 @@ category: research
 
 **SemEval-2026 Task 6: Multi-Seed DeBERTa Ensembles for Political Response Clarity and Evasion Classification**
 
-_With Dr. Jonathan Rusert, Purdue University, 2026_
+_With Dr. Jonathan Rusert, Purdue University Fort Wayne, 2026_
 
 I co-authored the system paper for SemEval 2026 Task 6 (CLARITY), which studies whether political responses clearly answer questions or evade them. Our system used multi-seed DeBERTa ensembles and placed **18/41** on Subtask 1 (clarity) and **12/33** on Subtask 2 (evasion).
 
@@ -24,7 +24,7 @@ The paper also documents an optimization paradox: learned ensemble weights, per-
 
 ## Task Scope
 
-The task uses the QEvasion dataset and evaluates both 3-way clarity (*Clear Reply*, *Ambivalent*, *Clear Non-Reply*) and 9-way evasion-type classification.
+The task uses the QEvasion dataset and evaluates both 3-way clarity (_Clear Reply_, _Ambivalent_, _Clear Non-Reply_) and 9-way evasion-type classification.
 
 ## Links
 
