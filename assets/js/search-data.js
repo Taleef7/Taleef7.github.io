@@ -85,7 +85,14 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/Taleef_Academic_CV.pdf", "_blank");
+          window.open("/assets/pdf/Taleef_Tamsal_Academic_CV_Updated.pdf", "_blank");
+        },
+      },{
+        id: 'social-resume_pdf',
+        title: 'Resume_pdf',
+        section: 'Socials',
+        handler: () => {
+          window.open("", "_blank");
         },
       },{
         id: 'social-email',
