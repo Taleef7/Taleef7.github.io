@@ -75,7 +75,7 @@ ninja.data = [{
               window.location.href = "/projects/10_unlp2026/";
             },},{id: "projects-workwell-measure-studio",
           title: 'WorkWell Measure Studio',
-          description: "Healthcare quality-measure platform built on FHIR and CQL",
+          description: "Clinical quality measure platform built on FHIR and CQL",
           section: "Projects",handler: () => {
               window.location.href = "/projects/11_workwell/";
             },},{id: "projects-m-s-thesis-peft-and-jailbreak-robustness",
