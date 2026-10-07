@@ -9,9 +9,6 @@ nav_order: 3
 
 ## Teaching assistant
 
-**Purdue University Fort Wayne**, 2025–2026  
-Graduate teaching assistant from September 2025 to May 2026, alongside my research position.
-
 **Algorithms (CS 310)**, LUMS, Fall 2023  
 Ran tutorials and office hours and graded assignments and quizzes.
 

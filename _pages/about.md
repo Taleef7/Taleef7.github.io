@@ -39,7 +39,7 @@ See [publications]({{ '/publications/' | relative_url }}) for abstracts, PDFs, a
 
 ## Selected engineering work
 
-- [WorkWell Measure Studio]({{ '/projects/11_workwell/' | relative_url }}) (Medical Informatics Engineering, 2026–present). A TypeScript/Next.js platform that runs CMS FHIR/CQL measure logic. Nine CMS measures pass all 455 official test cases, and the platform has computed 72,100 outcomes for 5,000 subjects. AI tools help with drafting and evidence review, but deterministic logic decides every compliance result.
+- [WorkWell Measure Studio]({{ '/projects/11_workwell/' | relative_url }}) (Medical Informatics Engineering, 2026–present). A TypeScript platform for WebChart that runs CMS's own FHIR measure artifacts. All 455 official test cases across nine CMS measures pass in CI, and the sandbox runs 120,000 evaluations a night. Its AI tools are read-only and never decide compliance.
 - [RASS]({{ '/projects/2_rass/' | relative_url }}) (Medical Informatics Engineering internship, 2025). A containerized RAG service for semantic search over 3,000+ Redmine issues, load-tested at 25 concurrent users with responses under 500 ms.
 - [JobOps Copilot]({{ '/projects/8_jobops_copilot/' | relative_url }}) (2026–present). A multi-tenant platform that runs stateful LangGraph agents with pgvector RAG and MCP tools, with tenant isolation, PII redaction, and CI quality gates.
 - Riccle (2025–2026). At an early-stage e-commerce startup, I merged order, inventory, payment, and customer data from four trackers into one source and set up recurring KPI reports in SQL and Python, saving about six hours a week.
