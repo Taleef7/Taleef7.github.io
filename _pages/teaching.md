@@ -2,7 +2,7 @@
 layout: page
 permalink: /teaching/
 title: teaching
-description: Teaching and mentorship experience
+description: Teaching, mentorship, and academic service
 nav: true
 nav_order: 3
 ---
@@ -30,6 +30,14 @@ Mentor undergraduates on graduate school applications, computer science research
 
 **GradApp Lab** — July 2024–January 2025  
 Mentored computer science students from Pakistan on graduate admissions processes, research transitions, and application strategies for North American graduate programs.
+
+## Academic Service
+
+**Reviewer** — 2026  
+SemEval 2026 Tasks 6 and 8; First Workshop on Reliable Evaluation for Language Models (JUDGe), NeurIPS 2026.
+
+**Presenter** — 2026  
+ACL 2026 (virtual): SemEval 2026 Task 6 and Task 8 system papers.
 
 ## Teaching Philosophy
 

@@ -1,9 +1,15 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
+"AACL Findings":
+  url: https://2026.aaclnet.org/
+  color: "#b31b1b"
+
+"NeurIPS WS":
+  url: https://neurips.cc/virtual/2026/workshop/137574
+  color: "#5b2a86"
+
+"SemEval":
+  url: https://semeval.github.io/SemEval2026/
   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+"Thesis":
+  url: https://hammer.purdue.edu/
+  color: "#8e6f3e"

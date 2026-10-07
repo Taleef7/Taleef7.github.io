@@ -14,7 +14,10 @@ _Advisor: Dr. Jonathan Rusert; Committee: Dr. Anshuman Misra and Dr. Jay Johns_
 
 This thesis presents a systematic empirical study of how full fine-tuning, LoRA, QLoRA, and quantization affect jailbreak robustness in consumer-accessible language models. The study covers **25 model configurations**, **four jailbreak attacks**, **two safety benchmarks**, **three automated evaluators**, and nearly **600 attack-success-rate measurements**, calibrated against a **750-sample human annotation study**.
 
-## Research Questions
+## Publications
+
+- **Adaptation, Not Algorithm: LoRA and Full Fine-Tuning Show Comparable Black-Box Jailbreak Degradation in Five Open-Weight LLMs.** Findings of AACL-IJCNLP 2026. [[code/artifacts]](https://github.com/Taleef7/adaptation-not-algorithm)
+- **Your Judge Is a Confound: Evaluator and Attack Choice Distort Jailbreak-Safety Measurement for Fine-Tuned LLMs.** JUDGe Workshop @ NeurIPS 2026 (oral); AdvML-Frontiers × CoTMA @ COLM 2026.
 
 ## Principal Findings
 
@@ -36,5 +39,5 @@ Python, PyTorch, Transformers, PEFT, LoRA/QLoRA, Quantization, Adversarial Evalu
 
 ## Links
 
-- [Thesis repository](https://github.com/Taleef7/peft-robustness-thesis)
+- [Paper code and artifacts (AACL Findings 2026)](https://github.com/Taleef7/adaptation-not-algorithm)
 - [Thesis PDF and publication record](https://hammer.purdue.edu/articles/thesis/Do_Efficient_Adaptations_Reduce_Safety_Jailbreak_Robustness_of_PEFT_vs_Full_Fine-Tuning_on_Consumer-Accessible_LLMs/32192700)
