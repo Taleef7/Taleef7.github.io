@@ -9,7 +9,14 @@ ninja.data = [{
     handler: () => {
       window.location.href = "/";
     },
-  },{id: "nav-publications",
+  },{id: "nav-news",
+          title: "news",
+          description: "Papers, talks, and career updates",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/news/";
+          },
+        },{id: "nav-publications",
           title: "publications",
           description: "Research publications and works in progress",
           section: "Navigation",
@@ -18,7 +25,7 @@ ninja.data = [{
           },
         },{id: "nav-teaching",
           title: "teaching",
-          description: "Teaching and mentorship experience",
+          description: "Teaching, mentorship, and academic service",
           section: "Navigation",
           handler: () => {
             window.location.href = "/teaching/";
@@ -30,7 +37,31 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/projects/";
           },
-        },{id: "projects-unlp-2026",
+        },{id: "news-started-my-m-s-in-computer-science-at-purdue-university-fort-wayne",
+          title: 'Started my M.S. in Computer Science at Purdue University Fort Wayne.',
+          description: "",
+          section: "News",},{id: "news-joined-medical-informatics-engineering-as-a-development-intern-building-rass-a-retrieval-augmented-semantic-search-service-over-3-000-engineering-issues",
+          title: 'Joined Medical Informatics Engineering as a development intern, building RASS, a retrieval-augmented semantic...',
+          description: "",
+          section: "News",},{id: "news-defended-my-m-s-thesis-do-efficient-adaptations-reduce-safety-jailbreak-robustness-of-peft-vs-full-fine-tuning-on-consumer-accessible-llms-and-graduated-from-purdue-fort-wayne-with-a-4-00-gpa-the-thesis-is-available-in-the-purdue-repository",
+          title: 'Defended my M.S. thesis, Do Efficient Adaptations Reduce Safety? Jailbreak Robustness of PEFT...',
+          description: "",
+          section: "News",},{id: "news-started-as-a-software-developer-at-medical-informatics-engineering-where-i-am-the-sole-developer-of-workwell-measure-studio-a-fhir-cql-quality-measure-platform",
+          title: 'Started as a Software Developer at Medical Informatics Engineering, where I am the...',
+          description: "",
+          section: "News",},{id: "news-both-of-our-semeval-2026-system-papers-are-now-in-the-acl-anthology-task-6-political-response-clarity-and-task-8-multi-turn-rag-i-presented-them-virtually-at-semeval-2026-co-located-with-acl-2026",
+          title: 'Both of our SemEval 2026 system papers are now in the ACL Anthology:...',
+          description: "",
+          section: "News",},{id: "news-paper-accepted-to-findings-of-aacl-ijcnlp-2026-adaptation-not-algorithm-shows-that-lora-and-full-fine-tuning-cause-comparable-black-box-jailbreak-degradation-across-five-open-weight-llms",
+          title: 'Paper accepted to Findings of AACL-IJCNLP 2026! Adaptation, Not Algorithm shows that LoRA...',
+          description: "",
+          section: "News",},{id: "news-released-the-code-result-tables-and-evaluator-labels-for-adaptation-not-algorithm-most-of-the-paper-s-statistics-can-be-recomputed-in-about-a-minute-without-a-gpu",
+          title: 'Released the code, result tables, and evaluator labels for Adaptation, Not Algorithm. Most...',
+          description: "",
+          section: "News",},{id: "news-your-judge-is-a-confound-accepted-for-an-oral-presentation-at-the-first-workshop-on-reliable-evaluation-for-language-models-judge-at-neurips-2026-the-paper-is-also-accepted-at-advml-frontiers-cotma-at-colm-2026",
+          title: 'Your Judge Is a Confound accepted for an oral presentation at the First...',
+          description: "",
+          section: "News",},{id: "projects-unlp-2026",
           title: 'UNLP 2026',
           description: "Ukrainian document question answering with retrieval and reranking",
           section: "Projects",handler: () => {
@@ -85,7 +116,7 @@ ninja.data = [{
         title: 'CV',
         section: 'Socials',
         handler: () => {
-          window.open("/assets/pdf/Taleef_Tamsal_Academic_CV_Updated.pdf", "_blank");
+          window.open("/assets/pdf/Taleef_Tamsal_CV.pdf", "_blank");
         },
       },{
         id: 'social-resume_pdf',
