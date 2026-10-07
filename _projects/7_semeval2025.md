@@ -1,45 +1,30 @@
 ---
 layout: page
 title: SemEval-2025 Task 10
-description: Multilingual Narratives in Online News
+description: Narrative framing in multilingual online news
 img:
-importance: 4
+importance: 5
 category: research
 ---
 
 **SemEval-2025 Task 10: Multilingual Characterization and Extraction of Narratives from Online News**
 
-_Purdue University Fort Wayne, 2025_
+_Purdue University Fort Wayne, 2024–2025_
 
-Repository: [GitHub](https://github.com/Taleef7/semeval-2025-task10-PFWT10)
+This task looks at how news articles frame people and events in five languages: English, Georgian, German, Greek, and Turkish. I built XLM-RoBERTa and multilingual BERT systems for three subtasks:
 
-Built multilingual transformer-based pipelines for analyzing narrative framing in online news across five languages (English, Georgian, German, Greek, and Turkish). This work demonstrated how representation choices and evaluation design significantly impact model behavior in politically sensitive text.
-
-## Task Components
-
-1. **Entity-Role Framing**: Classify how entities are framed (hero, victim, villain) in news narratives
-2. **Narrative Classification**: Identify overarching narrative themes in news articles
-3. **Narrative Extraction**: Extract specific narrative elements and their relationships
-
-## Technical Approach
-
-- XLM-RoBERTa and multilingual BERT architectures
-- Cross-lingual transfer learning strategies
-- Language-specific fine-tuning with shared representations
-- Systematic evaluation across linguistic and cultural contexts
+1. Entity framing: is a named entity cast as a protagonist, an antagonist, or an innocent?
+2. Narrative classification: which narratives and sub-narratives does an article contain?
+3. Narrative extraction: write a short explanation of the main narrative, grounded in the article text.
 
 ## Results
 
-- Achieved approximately 8× improvement over baseline performance
-- Demonstrated effective cross-lingual transfer for narrative understanding
-- Identified challenges in handling cultural and linguistic nuances in framing
+On our internal validation split, the systems reached about 8x the shared baseline. The harder lesson was how much the outcome depended on representation choices and on how evaluation was set up, which matters a lot for politically sensitive text where labels are already contested.
 
-## Insights
+## Stack
 
-- Representation choices critically affect model interpretations of politically sensitive content
-- Evaluation design must account for cultural context and linguistic variation
-- Cross-lingual models can transfer narrative understanding across languages with proper tuning
+Python, PyTorch, Hugging Face Transformers, XLM-RoBERTa, multilingual BERT
 
-## Skills & Tools
+## Links
 
-Python, Transformers, XLM-RoBERTa, BERT, Multilingual NLP, Cross-lingual Transfer, Narrative Analysis
+- [GitHub repository](https://github.com/Taleef7/semeval-2025-task10-PFWT10)

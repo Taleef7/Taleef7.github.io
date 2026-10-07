@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-**Paper accepted to Findings of AACL-IJCNLP 2026!** _Adaptation, Not Algorithm_ shows that LoRA and full fine-tuning cause comparable black-box jailbreak degradation across five open-weight LLMs.
+_Adaptation, Not Algorithm_ was **accepted to Findings of AACL-IJCNLP 2026**. Across five open-weight LLMs, we find that LoRA and full fine-tuning cause about the same black-box jailbreak degradation.

@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Research publications and works in progress
+description: First-author papers with Dr. Jonathan Rusert, and my master’s thesis
 nav: true
 nav_order: 2
 ---

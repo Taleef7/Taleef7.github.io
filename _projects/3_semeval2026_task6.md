@@ -3,30 +3,27 @@ layout: page
 title: SemEval 2026 Task 6 (CLARITY)
 description: Multi-seed DeBERTa ensembles for political response clarity and evasion classification
 img:
-importance: 6
+importance: 2
 category: research
 ---
 
-**SemEval-2026 Task 6: Multi-Seed DeBERTa Ensembles for Political Response Clarity and Evasion Classification**
+**PFW at SemEval-2026 Task 6: Multi-Seed DeBERTa Ensembles for Political Response Clarity and Evasion Classification**
 
-_With Dr. Jonathan Rusert, Purdue University Fort Wayne, 2026_
+_Taleef Tamsal and Jonathan Rusert. SemEval 2026, pp. 1518–1525._
 
-I co-authored the system paper for SemEval 2026 Task 6 (CLARITY), which studies whether political responses clearly answer questions or evade them. Our system used multi-seed DeBERTa ensembles and placed **18/41** on Subtask 1 (clarity) and **12/33** on Subtask 2 (evasion).
+CLARITY asks whether a politician's answer in an interview actually answers the question. Subtask 1 labels each response as a clear reply, an ambivalent one, or a clear non-reply. Subtask 2 identifies which of nine evasion techniques was used. Our system placed 18th of 41 on clarity (macro F1 0.76) and 12th of 33 on evasion (macro F1 0.50) without calling any external LLM.
 
-## System and Results
+## System
 
-- DeBERTa-xlarge for 3-way clarity classification and DeBERTa-v3-large for 9-way evasion classification
-- Five folds and ten seeds per fold, producing a 50-model ensemble for each subtask
-- Simple logit averaging without an external LLM or API dependency
-- Official macro F1 of **0.76** for clarity and **0.50** for evasion
+- DeBERTa-xlarge for the 3-way clarity task and DeBERTa-v3-large for the 9-way evasion task
+- Five cross-validation folds times ten random seeds, for 50 models per subtask, combined by averaging their logits
 
-The paper also documents an optimization paradox: learned ensemble weights, per-class thresholds, and hierarchical masking improved out-of-fold scores but degraded official evaluation scores. Model-level diversity transferred more reliably than prediction-level calibration under the limited evaluation set.
+## What we learned
 
-## Task Scope
-
-The task uses the QEvasion dataset and evaluates both 3-way clarity (_Clear Reply_, _Ambivalent_, _Clear Non-Reply_) and 9-way evasion-type classification.
+Three extra steps (learned ensemble weights, per-class thresholds, and hierarchical masking) all improved our cross-validation scores and then made the official scores worse, by 0.02 to 0.10 F1. The evaluation set has only 237 examples, and two of the three drops fall inside the noise you would expect from a set that small, so we read this cautiously. The direction was consistent, though, and it suggests that tuning on cross-validation predictions can overfit when evaluation data is limited. Adding diversity through more seeds held up better than calibrating predictions after the fact.
 
 ## Links
 
-- [Code and paper repository](https://github.com/Taleef7/semeval-2026-task6)
+- [Paper (ACL Anthology)](https://aclanthology.org/2026.semeval-1.197/)
+- [Code](https://github.com/Taleef7/semeval-2026-task6)
 - [CLARITY task page](https://konstantinosftw.github.io/CLARITY-SemEval-2026/)

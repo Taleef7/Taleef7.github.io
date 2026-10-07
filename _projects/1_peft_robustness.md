@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "Master's Thesis: PEFT and Jailbreak Robustness"
-description: Jailbreak robustness of PEFT versus full fine-tuning on consumer-accessible LLMs
+title: "M.S. Thesis: PEFT and Jailbreak Robustness"
+description: Does parameter-efficient fine-tuning make LLMs easier to jailbreak?
 img:
 importance: 1
 category: research
@@ -9,35 +9,30 @@ category: research
 
 **Do Efficient Adaptations Reduce Safety? Jailbreak Robustness of PEFT vs. Full Fine-Tuning on Consumer-Accessible LLMs**
 
-_Master's Thesis, Purdue University Fort Wayne, defended May 2026_
-_Advisor: Dr. Jonathan Rusert; Committee: Dr. Anshuman Misra and Dr. Jay Johns_
+_M.S. thesis, Purdue University Fort Wayne, defended May 2026_  
+_Advisor: Dr. Jonathan Rusert. Committee: Dr. Anshuman Misra and Prof. Jay Johns._
 
-This thesis presents a systematic empirical study of how full fine-tuning, LoRA, QLoRA, and quantization affect jailbreak robustness in consumer-accessible language models. The study covers **25 model configurations**, **four jailbreak attacks**, **two safety benchmarks**, **three automated evaluators**, and nearly **600 attack-success-rate measurements**, calibrated against a **750-sample human annotation study**.
+People fine-tune open-weight models on consumer hardware all the time, usually with LoRA or QLoRA instead of full fine-tuning. My thesis asks whether that choice changes how easily the resulting model can be jailbroken. I fine-tuned 25 model configurations across five families (Gemma-2, Llama-3.1, Phi-4, Qwen2.5, and Qwen3), attacked them with four jailbreak methods on two safety benchmarks, and scored nearly 600 attack-success measurements with three automated evaluators. A 750-sample human annotation study checked the evaluators themselves.
 
-## Publications
+## Findings
 
-- **Adaptation, Not Algorithm: LoRA and Full Fine-Tuning Show Comparable Black-Box Jailbreak Degradation in Five Open-Weight LLMs.** Findings of AACL-IJCNLP 2026. [[code/artifacts]](https://github.com/Taleef7/adaptation-not-algorithm)
-- **Your Judge Is a Confound: Evaluator and Attack Choice Distort Jailbreak-Safety Measurement for Fine-Tuned LLMs.** JUDGe Workshop @ NeurIPS 2026 (oral); AdvML-Frontiers × CoTMA @ COLM 2026.
+- Full fine-tuning, LoRA, and QLoRA all raised average black-box attack success. The method mattered less than the fact of fine-tuning.
+- The attack type interacted with the adaptation method. A model that got harder to break with a white-box attack could get easier to break with black-box ones.
+- The evaluator changed the answer. Against human labels, the HarmBench classifier was far more precise than GPT-4o-mini, which flagged many safe outputs as jailbreaks.
+- Quantizing the base model to 4 bits did not measurably change its safety.
 
-## Principal Findings
+## Methods
 
-- Full fine-tuning, LoRA, and QLoRA all increased mean black-box attack success in the primary analysis.
-- Attack type interacted significantly with adaptation strategy: behavior that improved against a white-box attack could worsen against black-box attacks.
-- Evaluator choice materially changed measured safety; human validation favored the Llama-2 evaluator over GPT-4o-mini for precision on the annotated sample.
-- Four-bit quantization of the base model preserved safety within the uncertainty of the study.
+- Attacks: PAIR, DeepInception, ArtPrompt, and AutoDAN, on HarmBench and JailbreakBench
+- Training and evaluation pipelines with FSDP and SLURM on Purdue's Gilbreth cluster (A100 and A30 GPUs)
+- Bootstrap confidence intervals, equivalence testing, and interaction analysis
 
-## Methodology
+## Papers from this work
 
-- Empirical evaluation using PAIR, DeepInception, ArtPrompt, and AutoDAN
-- Testing Gemma-2, Llama-3.1, Qwen-3, Phi-4, and Qwen-2.5 model families
-- Reproducible FSDP and SLURM training and evaluation pipelines on Purdue Gilbreth
-- Statistical analysis with bootstrap confidence intervals, hypothesis tests, and interaction analysis
-
-## Skills & Tools
-
-Python, PyTorch, Transformers, PEFT, LoRA/QLoRA, Quantization, Adversarial Evaluation, LLM Safety
+- _Adaptation, Not Algorithm: LoRA and Full Fine-Tuning Show Comparable Black-Box Jailbreak Degradation in Five Open-Weight LLMs._ Findings of AACL-IJCNLP 2026. [[code and artifacts]](https://github.com/Taleef7/adaptation-not-algorithm)
+- _Your Judge Is a Confound: Evaluator and Attack Choice Distort Jailbreak-Safety Measurement for Fine-Tuned LLMs._ JUDGe workshop at NeurIPS 2026 (oral); AdvML-Frontiers × CoTMA at COLM 2026.
 
 ## Links
 
-- [Paper code and artifacts (AACL Findings 2026)](https://github.com/Taleef7/adaptation-not-algorithm)
-- [Thesis PDF and publication record](https://hammer.purdue.edu/articles/thesis/Do_Efficient_Adaptations_Reduce_Safety_Jailbreak_Robustness_of_PEFT_vs_Full_Fine-Tuning_on_Consumer-Accessible_LLMs/32192700)
+- [Thesis in the Purdue repository](https://doi.org/10.25394/PGS.32192700)
+- [Paper code and artifacts](https://github.com/Taleef7/adaptation-not-algorithm)

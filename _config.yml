@@ -7,9 +7,9 @@ first_name: Taleef
 middle_name:
 last_name: Tamsal
 contact_note: >
-  Feel free to reach out about software engineering, applied AI, research collaborations, or interesting systems problems.
+  Email is the best way to reach me. I'm glad to talk about LLM safety and evaluation, research collaborations, or healthcare software.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Software developer building production AI systems, backend services, and reliable language-model evaluations.
+  Taleef Tamsal is a software developer at Medical Informatics Engineering and a researcher in LLM safety and evaluation.
 footer_text: >
   Built with <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> and the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: software-engineering, artificial-intelligence, llm-safety, nlp, rag, agents, robustness, evaluation, academic-website
@@ -145,7 +145,7 @@ collections:
   books:
     output: true
   news:
-    output: true
+    output: false # news items are short inline announcements shown on / and /news/
   projects:
     output: true
 

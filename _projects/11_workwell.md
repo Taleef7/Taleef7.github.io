@@ -1,27 +1,26 @@
 ---
 layout: page
 title: WorkWell Measure Studio
-description: Production compliance and measure operations platform
+description: Healthcare quality-measure platform built on FHIR and CQL
 img:
-importance: 4
+importance: 1
 category: work
 ---
 
-**WorkWell Measure Studio**
+_Medical Informatics Engineering · Software Developer · May 2026–present_
 
-_Medical Informatics Engineering | Software Developer | 2026 - Present_
+WorkWell Measure Studio is a full-stack platform for Total Worker Health compliance. It runs CMS clinical quality measure logic written in CQL, reads patient data as HL7 FHIR R4 through SMART Backend Services, and keeps the evidence behind every computed result so a reviewer can see why a case passed or failed. I'm its sole developer.
 
-Building a production Total Worker Health compliance platform that brings measure authoring, deterministic CQL evaluation, case management, audit trails, administrative operations, and exportable evidence into one operational system.
+## What I built
 
-## Key Contributions
+- Encoded nine CMS clinical quality measures. All nine pass the 455 official MADiE test cases, and measure correctness is a release gate. Along the way I found a defect in the reference engine, which its maintainers confirmed.
+- Scaled the platform to 72,100 computed outcomes across 5,000 subjects, with a resumable batch pipeline that keeps memory bounded and isolates failures to individual records.
+- Traced a four-day production outage to its root cause. The fix cut idle database queries from about 1,300 a day to 2.
+- Moved manual drafting and evidence review into AI-assisted workflows through 13 role-gated, read-only MCP tools. The AI can draft and summarize, but deterministic CQL decides every compliance result.
+- Migrated the backend from Java 21/Spring Boot to modular TypeScript without breaking any REST contracts, and added FHIR MeasureReport, MAT-compatible, and QRDA exports.
+- Backed it all with 3,268 automated backend tests in CI.
 
-- Migrated the backend from Java 21/Spring Boot to modular TypeScript while preserving REST contracts and deterministic CQL behavior
-- Implemented HL7 FHIR R4, SMART Backend Services, FHIR MeasureReport, MAT-compatible, and QRDA interoperability
-- Made measure correctness a release gate: **nine CMS quality measures** pass all **455 official MADiE test cases**, and I reported a confirmed reference-engine defect
-- Designed a resumable batch pipeline over **70,000 PostgreSQL records** with bounded memory and per-record failure isolation
-- Backend covered by **3,268 automated tests**; a read-only MCP interface exposes **13 role-gated tools** without allowing AI to determine compliance, and deterministic CQL remains the compliance authority
-
-## Technical Stack
+## Stack
 
 TypeScript, Next.js, PostgreSQL, Docker, GitHub Actions, HL7 FHIR R4, SMART Backend Services, CQL, MCP
 

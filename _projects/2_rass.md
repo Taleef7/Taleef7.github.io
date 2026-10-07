@@ -1,7 +1,7 @@
 ---
 layout: page
 title: RASS
-description: Retrieval-Augmented Semantic Search platform for enterprise documents
+description: Retrieval-augmented semantic search over engineering issues
 img:
 importance: 2
 category: work
@@ -9,27 +9,21 @@ category: work
 
 **Retrieval-Augmented Semantic Search (RASS)**
 
-_Medical Informatics Engineering | Software Development Intern | May 2025 - August 2025_
+_Medical Informatics Engineering · Software Development Intern · May–August 2025_
 
-Built a containerized, multi-service RAG platform for semantic, citation-backed search over long-form enterprise documents. The system decouples asynchronous ingestion from query serving and treats evaluation as a first-class requirement, with automated quality gates for grounding and relevance integrated into the deployment pipeline.
+RASS lets engineers search more than 3,000 Redmine issues by meaning instead of keywords and get answers with citations back to the source issues. I built and containerized the first prototype and grew it into a multi-service platform.
 
-## Key Contributions
+## What I built
 
-- Designed and implemented a multi-service RAG pipeline using Node.js, Docker, OpenSearch, Redis, and PostgreSQL
-- Combined hybrid search and reranking for citation-backed retrieval over more than 3,000 enterprise documents
-- Measured more than 85% relevance with RAGAS and TruLens pre-deployment quality gates
-- Exposed REST, MCP, and SSE interfaces with structured citations, JWT/API-key authentication, user-scoped security filters, and OpenTelemetry observability
-- Decoupled asynchronous document ingestion from query serving for up to 25 concurrent users and AI agents
+- A pipeline that ingests documents, embeds them, retrieves with hybrid search in OpenSearch, and reranks the results. An LLM plans the query before retrieval.
+- Separate services for asynchronous ingestion and for query serving, written in Node.js with Redis and PostgreSQL and deployed with Docker.
+- REST, MCP, and SSE interfaces with structured citations, JWT and API-key authentication, and per-user security filters, so both people and AI agents can query it.
+- Benchmarks for relevance, grounding, and latency across retriever and model settings. Context relevance stayed above 85% in RAGAS and TruLens checks that run before each deployment.
+- Load tests at 25 concurrent users with responses under 500 ms, plus OpenTelemetry tracing so retrieval and service failures are easy to diagnose.
 
-## Technical Stack
+## Stack
 
-Node.js, Docker, OpenSearch, Redis, PostgreSQL, RAGAS, TruLens, Enterprise Search
-
-## Impact
-
-- Enabled citation-backed semantic search across thousands of pages of technical documentation
-- Established an evaluation-first approach to ensure answer quality before deployment
-- Provided measurable quality and observability signals for stakeholder confidence
+Node.js, Docker, OpenSearch, Redis, PostgreSQL, RAGAS, TruLens, OpenTelemetry
 
 ## Links
 

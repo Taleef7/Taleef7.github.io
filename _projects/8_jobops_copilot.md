@@ -1,32 +1,31 @@
 ---
 layout: page
 title: JobOps Copilot
-description: Human-in-the-loop AI agent platform for job-search operations
+description: Multi-tenant AI agent platform for job-search operations
 img:
 importance: 3
 category: work
 ---
 
-**JobOps Copilot**
+_Personal project · May 2026–present · [live demo](https://jobops-web.azurewebsites.net)_
 
-_Deployed project | May 2026 - Present_
+JobOps Copilot is a multi-tenant platform for running a job search: a CRM for applications, job discovery, company research, interview prep, and outreach drafting. Stateful LangGraph agents do the research and drafting, but a person approves everything. The system never applies to a job or sends a message on its own.
 
-Built and deployed a human-in-the-loop AI job-operations platform that combines a CRM, job discovery, RAG, multi-step agents, and workflow automation. The system drafts and recommends, but does not auto-apply or send outreach without user approval.
+## What I built
 
-## Key Contributions
+- A Next.js and React frontend, an Express/TypeScript API, and a Python/FastAPI service for the agents
+- LangGraph workflows for job tracking, company research, interview preparation, skill-gap analysis, and outreach drafting, with tool calls over MCP and results saved to the database
+- RAG over resumes and job descriptions with pgvector, plus routing across several model providers
+- Tenant isolation, PII redaction, rate limits, cost controls, and prompt-injection defenses
+- Evaluation and quality gates in CI/CD, which helped raise job-ranking correlation from 0.716 to 0.821
+- Workflow integrations with n8n, Make, and Zapier
+- Deployment on Azure: App Service and Azure PostgreSQL for the web app and API, Container Apps for the agent service
 
-- Built a Next.js 16 and React 19 frontend with an Express/TypeScript API and Python/FastAPI agent service
-- Developed LangGraph multi-agent workflows for job tracking, company research, interview preparation, skill-gap analysis, and outreach drafting
-- Added pgvector-backed RAG over resumes and job descriptions, multi-provider model routing, tool calling, and persisted agent outputs
-- Deployed the web and API services on Azure App Service with Azure PostgreSQL and the agent service on Azure Container Apps
-- Improved ranking correlation from **0.716** to **0.821**
-- Added n8n, Make, and Zapier workflow integrations, evaluation gates, PII redaction, rate limits, cost controls, and prompt-injection defenses
+## Stack
+
+Next.js, React, TypeScript, Express, Python, FastAPI, LangGraph, PostgreSQL, pgvector, MCP, Azure, Docker
 
 ## Links
 
 - [GitHub repository](https://github.com/Taleef7/jobops-copilot)
 - [Live demo](https://jobops-web.azurewebsites.net)
-
-## Technical Stack
-
-Next.js, React, TypeScript, Express, Python, FastAPI, LangChain, PostgreSQL, pgvector, Azure, Docker, n8n

@@ -8,7 +8,7 @@
   booktitle={Findings of the Association for Computational Linguistics: AACL-IJCNLP 2026},
   year={2026},
   note={Accepted},
-  abstract={We fine-tune five open-weight instruction models (Gemma-2-9B-IT, Llama-3.1-8B-Instruct, Phi-4, Qwen2.5-14B-Instruct, and Qwen3-4B-Instruct-2507) with LoRA, QLoRA, and full fine-tuning, and compare them with the unmodified base model and a 4-bit base. Across black-box, white-box, and multi-turn jailbreaks on HarmBench and JailbreakBench, scored by three automated evaluators checked against 750 doubly annotated human samples, benign fine-tuning raises black-box attack success by similar amounts whichever method is used. Under a ±5 pp equivalence bound fixed before training, LoRA and full fine-tuning are equivalent (TOST p = 0.014), QLoRA is more variable, and 4-bit quantization alone shows no meaningful degradation. Evaluator choice changes the conclusions: GPT-4o-mini's false-positive rate on human-consensus safe outputs is 45.7%, against 8.6% for the HarmBench classifier.},
+  abstract={We fine-tune five open-weight instruction models (Gemma-2-9B-IT, Llama-3.1-8B-Instruct, Phi-4, Qwen2.5-14B-Instruct, and Qwen3-4B-Instruct-2507) with LoRA, QLoRA, and full fine-tuning, and compare them with the unmodified base model and a 4-bit base. We attack all 25 configurations with black-box, white-box, and multi-turn jailbreaks on HarmBench and JailbreakBench, and score the outputs with three automated evaluators that we check against 750 doubly annotated human samples. Benign fine-tuning raises black-box attack success by similar amounts whichever method is used. Under a ±5 pp equivalence bound fixed before training, LoRA and full fine-tuning are equivalent (TOST p = 0.014). QLoRA is more variable, and 4-bit quantization alone has no significant effect. The evaluator matters as much as the method: GPT-4o-mini's false-positive rate on outputs humans agreed were safe is 45.7\%, compared with 8.6\% for the HarmBench classifier.},
   code={https://github.com/Taleef7/adaptation-not-algorithm},
   bibtex_show={true},
   selected={true}
@@ -23,7 +23,7 @@
   note={Non-archival. Also accepted at AdvML-Frontiers × CoTMA, COLM 2026.},
   award={Accepted for oral presentation at JUDGe @ NeurIPS 2026.},
   award_name={Oral},
-  abstract={An empirical study showing how evaluator and attack choice can distort jailbreak-safety measurement for fine-tuned language models. Evaluator choice can change the conclusion as much as the adaptation method: even stronger GPT-5.6 judge configurations over-flag 21.5–29.9% of safe completions, and identical outputs receive different labels on 3–15% of repeat evaluations.},
+  abstract={Measuring the jailbreak safety of fine-tuned LLMs depends on which automated judge scores the outputs and which attacks are used. We show that both choices can distort the measurement. Changing the evaluator can shift the conclusion as much as changing the adaptation method. Stronger judges do not fix the problem: GPT-5.6 configurations still flagged 21.5–29.9\% of safe completions as jailbreaks, and identical outputs received different labels on 3–15\% of repeat evaluations.},
   code={https://github.com/Taleef7/adaptation-not-algorithm},
   selected={true}
 }
@@ -40,7 +40,7 @@
   year={2026},
   doi={10.18653/v1/2026.semeval-1.198},
   url={https://aclanthology.org/2026.semeval-1.198/},
-  abstract={A lightweight multi-turn RAG system that combines BM25, SPLADE-v3, and Jina Embeddings v4 with weighted reciprocal rank fusion, plus zero-shot GPT-4o/GPT-4o-mini prompting for faithful generation. The system ranked 6/26 on Task B, 14/29 on Task C, and 20/38 on Task A. Explicit citation-format instructions, not chain-of-thought alone, raised citation use from 4% to 93%.},
+  abstract={We describe PFW Task 8's system for SemEval 2026 Task 8 (MTRAGEval), a benchmark for multi-turn retrieval-augmented generation across four English-language corpora. Our submission combines BM25, SPLADE-v3, and Jina Embeddings v4 with weighted reciprocal rank fusion for retrieval, plus zero-shot GPT-4o/GPT-4o-mini prompting for generation. Officially, our system ranks 6th of 26 on Task B (H = 0.756), 14th of 29 on Task C (H = 0.533), and 20th of 38 on Task A (nDCG@5 = 0.433). For the camera-ready analysis, we re-run retrieval at the official nDCG@5 cutoff, strengthen the prompt ablation with per-domain statistics and exact tests, and analyze official outputs by answerability and domain. On a balanced 100-example development sample, explicit citation-format instructions, not chain-of-thought alone, raise citation use from 4\% to 93\%, and a fixed-context Task C control improves from H = 0.463 with GPT-4o-mini to H = 0.523 with GPT-4o. Official analytics also show near-perfect UNANSWERABLE handling (H = 0.990) but weak behavior on UNDERSPECIFIED turns, where the system answers or refuses instead of clarifying. Our code is publicly available.},
   pdf={https://aclanthology.org/2026.semeval-1.198.pdf},
   code={https://github.com/Taleef7/semeval-2026-task8},
   bibtex_show={true},
@@ -59,7 +59,7 @@
   year={2026},
   doi={10.18653/v1/2026.semeval-1.197},
   url={https://aclanthology.org/2026.semeval-1.197/},
-  abstract={A multi-seed DeBERTa ensemble for political response clarity and evasion classification: 5-fold cross-validation with 10 random seeds yields 50 models per architecture, combined through logit averaging. The system achieves macro F1 of 0.76 on clarity (18/41) and 0.50 on evasion (12/33). Three post-hoc optimization techniques each improve out-of-fold performance yet degrade evaluation scores, suggesting a risk of overfitting to cross-validation predictions when evaluation data is limited.},
+  abstract={This paper describes the PFW system for SemEval-2026 Task 6 (CLARITY), which addresses the classification of response clarity and evasion techniques in political interview question-answer pairs. Rather than relying on large language model prompting, we pursue a competitive non-LLM approach based on fine-tuning DeBERTa-xlarge and DeBERTa-v3-large with a multi-seed ensemble strategy: 5-fold cross-validation with 10 random seeds yields 50 models per architecture, combined through simple logit averaging. Our system achieves a macro F1 of 0.76 on Subtask 1 (clarity-level classification) and 0.50 on Subtask 2 (evasion-type classification). We also find that three post-hoc optimization techniques (learned ensemble weights, threshold calibration, and hierarchical masking) each improve out-of-fold performance yet degrade evaluation scores by 0.02–0.10 F1. This pattern should be interpreted cautiously: the 237-sample evaluation set likely contributes substantial variance, and two of the three degradations fall within the ±0.06 95\% CI expected from sampling noise. Still, the consistent directional pattern across all three prediction-level interventions provides suggestive evidence for an optimization paradox, highlighting the risk of overfitting to cross-validation predictions when evaluation data is limited.},
   pdf={https://aclanthology.org/2026.semeval-1.197.pdf},
   code={https://github.com/Taleef7/semeval-2026-task6},
   bibtex_show={true},
@@ -74,6 +74,6 @@
   month={may},
   year={2026},
   doi={10.25394/PGS.32192700},
-  abstract={A systematic study of 25 model configurations evaluated against four jailbreak attacks and two safety benchmarks, producing nearly 600 attack-success-rate measurements calibrated against a 750-sample human annotation study. The thesis examines how full fine-tuning, LoRA, QLoRA, and quantization change black-box safety and how evaluator choice affects conclusions.},
+  abstract={Parameter-efficient fine-tuning makes it practical to adapt open-weight language models on consumer hardware, but it is unclear whether these methods change how easily the adapted models can be jailbroken. This thesis fine-tunes 25 model configurations across five families with full fine-tuning, LoRA, QLoRA, and 4-bit quantization, attacks them with four jailbreak methods on two safety benchmarks, and reports nearly 600 attack-success-rate measurements. A 750-sample human annotation study calibrates the three automated evaluators and shows that the choice of evaluator materially changes measured safety.},
   selected={true}
 }

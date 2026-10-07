@@ -1,41 +1,23 @@
 ---
 layout: page
 title: Patient Consent Smart Contracts
-description: Blockchain-based patient consent management system
+description: Blockchain-based patient consent management
 img:
-importance: 5
+importance: 4
 category: work
 ---
 
-**Patient Consent Management via Smart Contracts**
+_LUMS final year project_
 
-_LUMS Final Year Project_
+For my undergraduate final year project, I designed and extended a prototype that records patient consent in Ethereum smart contracts. Patients decide which providers can see which types of data and can change or revoke that consent at any time. Every change is written to the chain, which gives an audit trail of who was granted access to what and when.
 
-Designed and extended a patient-consent prototype using blockchain smart contracts with fine-grained access control. The system focuses on auditability, secure consent updates, and realistic healthcare workflow integration.
+## What I built
 
-## Objectives
-
-- Provide patients with granular control over medical data access
-- Create immutable audit trail of all consent changes
-- Enable secure, transparent consent management in healthcare settings
-- Support dynamic consent updates while maintaining security
-
-## Technical Implementation
-
-- Smart contract architecture for consent management
-- Fine-grained access control mechanisms
+- Smart contracts in Solidity for granting, updating, and revoking consent per provider and per data type
 - Role-based permissions for healthcare providers
-- Audit logging and transparency features
-- Integration considerations for clinical workflows
+- Cryptographic verification of consent changes and an on-chain audit log
+- Attention to how the system would fit into existing clinical workflows
 
-## Key Features
+## Stack
 
-- **Granular Control**: Patients can specify exactly which data types each provider can access
-- **Auditability**: Complete history of who accessed what data and when
-- **Dynamic Updates**: Patients can revoke or modify consent at any time
-- **Secure Updates**: Cryptographic verification of consent changes
-- **Workflow Integration**: Designed to fit realistic healthcare provider workflows
-
-## Skills & Tools
-
-Solidity, Ethereum, Smart Contracts, Blockchain, Access Control, Healthcare IT, Security
+Solidity, Ethereum, smart contracts, access control

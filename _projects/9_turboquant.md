@@ -3,26 +3,24 @@ layout: page
 title: TurboQuant
 description: KV-cache compression for long-context language models
 img:
-importance: 4
+importance: 6
 category: research
 ---
 
-**TurboQuant: KV-Cache Compression for LLMs**
+_Replication and evaluation project, 2026_
 
-_Engineering replication and evaluation project, 2026_
-
-Reimplemented TurboQuant-style KV-cache compression in PyTorch to study the trade-off between long-context memory usage and generation quality on consumer GPUs. The implementation integrates rotation, Lloyd-Max quantization, Hugging Face DynamicCache, and paired baseline-versus-compressed evaluation.
+Long contexts run out of GPU memory because the key-value cache grows with every token. I reimplemented TurboQuant-style KV-cache compression in PyTorch to see how much memory it saves on consumer GPUs and what it costs in output quality. The implementation combines rotation, Lloyd-Max quantization, and Hugging Face's DynamicCache, and every compressed run is paired with an uncompressed baseline.
 
 ## Results
 
-- Achieved **5.2x** KV-cache compression in the validated configuration
-- Matched baseline completion quality in the tested suites
-- Met the retrieval-safety gate through 32K context on Qwen2.5-7B, with a **1.39 percentage-point** paired NIAH delta
-- Documented the current scope and limits with reproducible release-check scripts and reports
+- 5.2x KV-cache compression in the validated configuration
+- Completion quality matched the baseline on the test suites I ran
+- On Qwen2.5-7B, needle-in-a-haystack retrieval stayed within 1.39 percentage points of the baseline out to 32K tokens
+- Release-check scripts and reports document exactly what was tested and where the implementation stops
 
-## Technical Stack
+## Stack
 
-Python, PyTorch, CUDA, Hugging Face Transformers, DynamicCache, Lloyd-Max quantization
+Python, PyTorch, CUDA, Triton, Hugging Face Transformers
 
 ## Links
 

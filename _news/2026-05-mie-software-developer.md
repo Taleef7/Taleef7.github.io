@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Started as a Software Developer at Medical Informatics Engineering, where I am the sole developer of [WorkWell Measure Studio](https://github.com/Taleef7/workwell), a FHIR/CQL quality-measure platform.
+Started as a Software Developer at Medical Informatics Engineering. I’m the sole developer of [WorkWell Measure Studio](https://github.com/Taleef7/workwell), which computes CMS clinical quality measures from FHIR data.

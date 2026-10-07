@@ -1,11 +1,11 @@
 {
   "basics": {
     "name": "Taleef Tamsal",
-    "label": "Software Developer | LLM Safety and Evaluation Researcher",
+    "label": "Software Developer · LLM Safety and Evaluation Researcher",
     "email": "taleeftamsal@hotmail.com",
     "phone": "+1 260 515 9571",
     "url": "https://taleef7.github.io/",
-    "summary": "Software developer and researcher working on LLM safety and adversarial robustness, reliable evaluation, agentic AI security, and trustworthy NLP/RAG. First author of an AACL-IJCNLP 2026 Findings paper, a NeurIPS 2026 workshop oral, and two SemEval 2026 system papers; sole developer of a production FHIR/CQL quality-measure platform.",
+    "summary": "I build production AI, backend, and healthcare software, and I research LLM safety and evaluation. At Medical Informatics Engineering I'm the sole developer of a production healthcare platform. I'm first author on four papers, including an oral presentation at a NeurIPS 2026 workshop and a Findings of AACL-IJCNLP 2026 paper.",
     "profiles": [
       {
         "network": "GitHub",
@@ -35,50 +35,55 @@
       "position": "Software Developer",
       "url": "https://github.com/Taleef7/workwell",
       "startDate": "2026-05",
-      "summary": "Building WorkWell Measure Studio as its sole developer: a TypeScript/Next.js platform that runs CMS FHIR/CQL measure logic, reads FHIR R4 data through SMART Backend Services, and keeps the evidence behind each computed result.",
+      "summary": "Sole developer of WorkWell Measure Studio, a full-stack healthcare compliance platform that runs CMS FHIR/CQL measure logic and keeps the evidence behind each computed result.",
       "highlights": [
-        "Made measure correctness a release gate: nine CMS measures pass all 455 official MADiE test cases.",
-        "Backend covered by 3,268 automated tests; a read-only MCP interface exposes 13 role-gated tools without allowing AI to determine compliance."
+        "Encoded nine CMS clinical quality measures with HL7 FHIR R4 and SMART Backend Services. All 455 official MADiE test cases pass, and I reported a reference-engine defect that its maintainers confirmed.",
+        "Scaled the platform to 72,100 outcomes across 5,000 subjects, with CI/CD and 3,268 automated backend tests.",
+        "Traced a four-day production outage to its root cause and cut idle queries from about 1,300 a day to 2.",
+        "Moved manual drafting and evidence review into AI-assisted workflows through 13 role-gated tools, while deterministic logic still decides every sensitive result."
       ]
     },
     {
       "name": "Purdue University Fort Wayne",
-      "position": "Graduate Researcher, LLM Safety and Evaluation (advised by Dr. Jonathan Rusert)",
+      "position": "Graduate Researcher, AI Safety and LLM Evaluation, and Teaching Assistant",
       "url": "https://github.com/Taleef7/adaptation-not-algorithm",
       "startDate": "2025-09",
       "endDate": "2026-05",
-      "summary": "Controlled study of how LoRA, QLoRA, 4-bit quantization, and full fine-tuning affect jailbreak robustness across five open-weight LLM families, with six attacks on HarmBench and JailbreakBench and three automated judges checked against 750 blind human annotations.",
+      "summary": "Studied how LoRA, QLoRA, 4-bit quantization, and full fine-tuning change jailbreak robustness in open-weight LLMs, advised by Dr. Jonathan Rusert. Also worked as a graduate teaching assistant.",
       "highlights": [
-        "Used a pre-specified ±5 pp TOST to show that LoRA and full fine-tuning had equivalent black-box safety degradation under the controlled recipe; QLoRA was more variable, and 4-bit quantization alone showed no meaningful degradation.",
-        "Found that evaluator choice could change the conclusion as much as the adaptation method: GPT-4o-mini mislabeled 45.7% of human-consensus safe outputs as jailbreaks (8.6% for HB-Cls), inflating measured degradation by about 3x.",
-        "For the JUDGe study, showed that GPT-5.6 judge configurations still over-flagged 21.5–29.9% of safe completions, and identical outputs received different labels on 3–15% of repeat evaluations."
+        "Fine-tuned and evaluated 25 LLM configurations across five model families (4B to 14B parameters) with SLURM on A100 and A30 GPUs.",
+        "Used a pre-specified ±5 pp equivalence test (TOST) to show that LoRA and full fine-tuning degrade black-box jailbreak safety equivalently under a controlled recipe, across nearly 600 attack-success measurements.",
+        "Ran a 750-sample blind human annotation study. GPT-4o-mini mislabeled 45.7% of safe outputs as jailbreaks, against 8.6% for a calibrated classifier, which inflated measured degradation by about 3x.",
+        "For the JUDGe study, showed that GPT-5.6 judges still over-flagged 21.5–29.9% of safe completions and gave identical outputs different labels on 3–15% of repeat evaluations."
       ]
     },
     {
-      "name": "Riccle",
-      "position": "Product Associate",
+      "name": "Riccle (early-stage e-commerce startup)",
+      "position": "Product Associate, Operations and Analytics",
       "startDate": "2025-09",
       "endDate": "2026-05",
-      "summary": "Analyzed customer, transaction, and competitor data to shape positioning and channel strategy.",
-      "highlights": ["Automated go-to-market workflows that cut six hours per week of manual reconciliation."]
+      "summary": "Ran operations reporting and analytics for a small e-commerce team.",
+      "highlights": [
+        "Merged order, inventory, payment, and customer data from four separate trackers into one source and built recurring KPI reports with SQL and Python, saving about six hours a week."
+      ]
     },
     {
       "name": "Purdue University Fort Wayne",
       "position": "Research Collaborator, Query-Efficient Adversarial NLP (Dr. Jonathan Rusert's group)",
       "startDate": "2025-06",
       "endDate": "2025-08",
-      "summary": "Studied where black-box text attacks such as TextFooler and TextBugger spend their query budget by separating selection from replacement, comparing datasets, victim models, and attack traces to find where fewer queries could achieve the same attack objective."
+      "summary": "Studied where black-box text attacks such as TextFooler and TextBugger spend their query budget, separating word selection from replacement and comparing datasets, victim models, and attack traces to find where fewer queries would do the same job."
     },
     {
       "name": "Medical Informatics Engineering",
-      "position": "Development Intern, NLP and Retrieval-Augmented Generation",
+      "position": "Software Development Intern, NLP and Retrieval-Augmented Generation",
       "url": "https://github.com/Taleef7/enhanced-rass",
       "startDate": "2025-05",
       "endDate": "2025-08",
-      "summary": "Built and containerized the first RASS prototype for semantic search over 3,000+ Redmine issues, combining document ingestion, embeddings, OpenSearch retrieval, and LLM-based query planning.",
+      "summary": "Built and containerized the first prototype of RASS, a RAG platform for semantic search over 3,000+ Redmine issues, with hybrid search, reranking, and MCP and SSE interfaces.",
       "highlights": [
-        "Benchmarked relevance, grounding, and latency across retriever and model settings, then tested the service at 25 concurrent users with sub-500 ms response time.",
-        "Added OpenTelemetry tracing to make retrieval and service failures easier to diagnose."
+        "Benchmarked relevance, grounding, and latency across retriever and model settings, and load-tested the service at 25 concurrent users and AI agents with responses under 500 ms.",
+        "Added OpenTelemetry tracing so retrieval and service failures were easy to diagnose."
       ]
     }
   ],
@@ -168,9 +173,9 @@
   ],
   "projects": [
     {
-      "name": "JobOps Copilot",
-      "summary": "Deployed AI job-operations platform on Azure with a Next.js frontend, Express/TypeScript API, and FastAPI agent service.",
-      "highlights": ["LangGraph multi-agent workflows with tool use and RAG", "Improved ranking correlation from 0.716 to 0.821"],
+      "name": "JobOps Copilot, multi-tenant AI agent platform",
+      "summary": "Next.js, TypeScript, and Python platform that runs stateful LangGraph agents with pgvector RAG and MCP tools, deployed on Azure with a live demo.",
+      "highlights": ["Tenant isolation and PII redaction", "CI/CD quality gates", "Job-ranking correlation raised from 0.716 to 0.821"],
       "startDate": "2026-05",
       "url": "https://github.com/Taleef7/jobops-copilot"
     },
@@ -245,7 +250,7 @@
     },
     {
       "name": "Languages",
-      "keywords": ["Python", "TypeScript", "JavaScript", "SQL", "Java", "C#", "Bash", "C++"]
+      "keywords": ["Python", "TypeScript", "JavaScript", "SQL", "Java", "C#", "Bash", "C++", "R"]
     },
     {
       "name": "Backend & Web",
@@ -257,10 +262,14 @@
     },
     {
       "name": "Healthcare & HPC",
-      "keywords": ["FHIR R4", "CQL/ELM", "SMART Backend Services", "SLURM/HPC"]
+      "keywords": ["FHIR R4", "CQL/ELM", "CMS eCQMs", "SMART Backend Services", "SLURM/HPC"]
     }
   ],
   "certificates": [
+    {
+      "name": "AWS Certified AI Practitioner",
+      "issuer": "Amazon Web Services"
+    },
     {
       "name": "AWS Certified Cloud Practitioner",
       "issuer": "Amazon Web Services"
